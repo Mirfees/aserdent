@@ -1,0 +1,14 @@
+.dropdown-menu {
+  &__list {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+}

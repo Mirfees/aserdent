@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+.text-white {
+  color: #fff;
+}
+
+.plain-text {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28.6px;
+  letter-spacing: 0em;
+
+  &_size {
+    &_s {
+
+    }
+
+    &_xs {
+
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  line-height: 77px;
+  letter-spacing: -0.01em;
+  &_pos {
+    &_h1 {
+      font-size: 64px;
+    }
+
+    &_h2 {
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    &_h3 {
+      font-weight: 600;
+      font-size: 28px;
+    }
+  }
+
+  span {
+
+  }
+}
