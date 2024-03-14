@@ -1,0 +1,82 @@
+.mp-specialists {
+  &__container {
+    margin-bottom: 120px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 62px;
+  }
+
+  &__title-wrapper {
+  }
+
+  &__title-subtitle {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 21px 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    background-color: #F3F3F5;
+    border-radius: 16px;
+  }
+
+  &__img {
+    margin-bottom: 25px;
+    max-height: 286px;
+    border-radius: 16px;
+    overflow: hidden;
+    img {
+      transition: transform 0.2s linear;
+      &:hover {
+        transform: scale(120%);
+      }
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 30px;
+    padding-bottom: 30px;
+  }
+
+  &__item-title-wrapper {
+  }
+
+  &__item-title {
+    line-height: 33.6px;
+    white-space: nowrap;
+  }
+
+  &__position {
+    color: $gray;
+  }
+
+  &__item-title-wrapper {
+  }
+
+  &__experience {
+  }
+}

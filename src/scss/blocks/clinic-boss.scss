@@ -1,0 +1,58 @@
+.clinic-boss {
+  &__container {
+    margin-bottom: 120px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 647px auto;
+    grid-gap: 0 76px;
+    padding: 0 60px;
+  }
+
+  &__img {
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 52px 0;
+  }
+
+  &__title-wrapper {
+  }
+
+  &__title-subtitle {
+    text-transform: uppercase;
+    color: #828286;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $gray;
+  }
+
+  &__position {
+    color: $gray;
+  }
+
+  &__highlighted {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-left: $viola solid 3px;
+    padding-left: 20px;
+    span {
+      color: $viola;
+      font-weight: 600;
+    }
+  }
+}

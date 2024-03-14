@@ -21,15 +21,27 @@ document.addEventListener('DOMContentLoaded', function () {
         direction: 'horizontal',
         loop: true,
         slidesPerView: 2,
+        spaceBetween: 20,
 
         pagination: {
             el: '.slider-dentists__pagination',
         },
+    });
+
+    const sliderFeedback = new Swiper('.feedback__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+
+        pagination: {
+            el: '.feedback__pagination',
+        },
 
         // Navigation arrows
         navigation: {
-            nextEl: '.slider-dentists__next',
-            prevEl: '.slider-dentists__prev',
+            nextEl: '.feedback__next',
+            prevEl: '.feedback__prev',
         },
     });
 

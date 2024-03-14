@@ -21,6 +21,7 @@ html {
 
   &_color {
     &_gradient {
+      color: #fff;
       background-image: linear-gradient(90deg, rgba(183,111,255,1) 0%, rgba(57,177,193,1) 100%);
       &:hover {
         background-image: linear-gradient(90deg, rgba(183,111,255,1) 0%, rgba(183,111,255,1) 100%);

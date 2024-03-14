@@ -1,0 +1,50 @@
+.why-we {
+  &__container {
+    color: #fff;
+    margin-bottom: 120px;
+  }
+
+  &__wrapper {
+    padding: 62px;
+    background-color: $viola;
+    border-radius: 32px;
+  }
+
+  &__title-wrapper {
+    margin-bottom: 83px;
+  }
+
+  &__title-subtitle {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    opacity: 65%;
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: 30px;
+    width: 300px;
+  }
+
+  &__img {
+    width: fit-content;
+    img {
+      height: 126px;
+    }
+  }
+
+  &__item-title {
+    line-height: 33px;
+  }
+
+  &__item-desc {
+  }
+}

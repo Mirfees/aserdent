@@ -10,7 +10,11 @@
   }
 
   &__nav {
-
+    position: absolute;
+    right: 60px;
+    bottom: 74px;
+    display: flex;
+    gap: 55px;
   }
 
   &__prev {
@@ -45,7 +49,13 @@
   }
 
   &__pagination {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 60px!important;
+    left: unset!important;
+    right: 60px;
+    width: unset!important;
   }
 
   &__title {
@@ -68,5 +78,17 @@
   
   &__button {
     padding: 21px 39px;
+  }
+
+  .swiper-button-prev::after {
+    content: url("../img/arrow-left.svg");
+  }
+
+  .swiper-button-next::after {
+    content: url("../img/arrow-right.svg");
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $viola;
   }
 }
