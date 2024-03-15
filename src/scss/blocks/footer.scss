@@ -1,0 +1,77 @@
+.footer {
+  &__container {
+    background-color: #FBFAFC;
+  }
+
+  &__wrapper {
+    padding: 60px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__info {
+  }
+
+  &__logo {
+  }
+
+  &__license {
+  }
+
+  &__media {
+  }
+
+  &__media-link {
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__menu-title {
+  }
+
+  &__link {
+  }
+
+  &__contacts {
+  }
+
+  &__working-hours {
+  }
+
+  &__address {
+  }
+
+  &__for-contact {
+  }
+
+  &__tel {
+  }
+
+  &__button {
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__copyright {
+  }
+
+  &__policy {
+  }
+
+  &__created-by {
+  }
+}
