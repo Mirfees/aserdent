@@ -6,7 +6,16 @@
   &__wrapper {
     display: flex;
     gap: 93px;
-    padding: 0 60px;
+    @include paddingLR;
+    
+    @media screen and (max-width: 1440px) {
+      gap: 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__left {

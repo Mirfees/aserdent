@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let burgerMenu = document.getElementById('burger-menu');
+    let overlay = document.querySelector('.header-menu');
+    burgerMenu.addEventListener('click',function(){
+        this.classList.toggle("close");
+        overlay.classList.toggle("overlay");
+    });
 
     //begin SLIDERS
 

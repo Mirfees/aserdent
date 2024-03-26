@@ -6,9 +6,9 @@
 
 
 .plain-text {
-  font-size: 22px;
+  font-size: clamp(16px, 0.861rem + 0.429vw, 22px);
   font-weight: 400;
-  line-height: 28.6px;
+  line-height: clamp(22.6px, 1.273rem + 0.429vw, 28.6px);
   letter-spacing: 0em;
 }
 
@@ -25,21 +25,21 @@
 
 .title {
   font-weight: 700;
-  font-size: 64px;
-  line-height: 77px;
+  font-size: clamp(23px, 0.743rem + 2.714vw, 64px);
+  line-height: clamp(36px, 1.298rem + 2.929vw, 77px);
   letter-spacing: -0.01em;
 }
 
 .title-section {
   font-weight: 600;
-  font-size: 50px;
-  line-height: 60px;
+  font-size: clamp(22px, 0.725rem + 2vw, 50px);
+  line-height: clamp(28px, 1.007rem + 2.286vw, 60px);
   letter-spacing: -0.01em;
 }
 
 .title-secondary {
   font-weight: 600;
-  font-size: 28px;
+  font-size: clamp(18px, 0.893rem + 0.714vw, 28px);
   line-height: 60px;
   letter-spacing: -0.01em;
 }

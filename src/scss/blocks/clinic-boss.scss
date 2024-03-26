@@ -5,9 +5,9 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 647px auto;
+    grid-template-columns: 37.76% auto;
     grid-gap: 0 76px;
-    padding: 0 60px;
+    @include paddingLR;
   }
 
   &__img {

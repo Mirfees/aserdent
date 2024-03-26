@@ -1,0 +1,71 @@
+#burger-menu {
+  display: none;
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  overflow: visible;
+  position: relative;
+  z-index: 3;
+
+  span {
+    background: #0C4E8A;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+
+    &:before, &:after {
+      background: #0C4E8A;
+      display: block;
+      height: 4px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:before, &:after {
+      content: "";
+    }
+
+    right: 0px;
+    top: 13px;
+    width: 27px;
+
+    &:before {
+      left: 0px;
+      top: -10px;
+      width: 16px;
+    }
+
+    &:after {
+      left: 0px;
+      top: 10px;
+      width: 20px;
+    }
+  }
+
+  &.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+
+    &:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+    }
+
+    &:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    display: block;
+  }
+}

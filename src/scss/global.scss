@@ -8,14 +8,30 @@ html {
 }
 
 .container {
+  width: 100%;
   padding-left: 110px;
   padding-right: 110px;
+
+  @media screen and (max-width: 1440px){
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media screen and (max-width: 992px){
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media screen and (max-width: 520px){
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .button {
   display: block;
   white-space: nowrap;
-  font-size: 24px;
+  font-size: clamp(15px, -0.5rem + 1.667vw, 24px);
   width: fit-content;
   border-radius: 22px;
 

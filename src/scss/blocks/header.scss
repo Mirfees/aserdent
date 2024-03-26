@@ -1,6 +1,11 @@
 .header {
+  height: 105px;
   &__container {
+    position: fixed;
+    z-index: 10;
     margin-bottom: 38px;
+    width: 100%;
+    background: #fff;
   }
 
   &__wrapper {
@@ -8,5 +13,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
+
+    @media screen and (max-width: 1440px) {
+      padding: 20px 0px;
+    }
   }
 }

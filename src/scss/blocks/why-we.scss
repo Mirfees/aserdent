@@ -5,7 +5,7 @@
   }
 
   &__wrapper {
-    padding: 62px;
+    padding: 60px;
     background-color: $viola;
     border-radius: 32px;
   }
@@ -26,12 +26,26 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1520px){
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px 0;
+    }
+
+    @media screen and (max-width: 820px){
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
   }
 
   &__item {
     display: grid;
     grid-gap: 30px;
-    width: 300px;
+    max-width: 300px;
+    @media screen and (max-width: 820px){
+      justify-items: center;
+      text-align: center;
+    }
   }
 
   &__img {

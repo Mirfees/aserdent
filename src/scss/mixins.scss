@@ -1,3 +1,12 @@
 @mixin gradient {
   background-image: linear-gradient(to right, $viola, #38b1c1);
 }
+
+@mixin paddingLR {
+  padding: 0 clamp(0px, -1.393rem + 4.286vw, 60px);
+
+}
+
+@mixin paddingTBLR {
+
+}

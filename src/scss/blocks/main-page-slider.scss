@@ -15,6 +15,11 @@
     bottom: 74px;
     display: flex;
     gap: 55px;
+
+    @media screen and (max-width: 992px) {
+      right: unset;
+      bottom: 20px;
+    }
   }
 
   &__prev {
@@ -26,13 +31,21 @@
   }
 
   &__slider {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 707px 1fr;
     background-color: #F3F3F5;
     border-radius: 22px;
+
+    @media screen and (max-width: 1520px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__img-container {
+    @media screen and (max-width: 1520px) {
+      text-align: center;
+    }
   }
 
   &__img {
@@ -44,8 +57,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 60px;
-    padding-left: 76px;
+    padding: clamp(30px, 1.179rem + 2.143vw, 60px);
+    padding-left: clamp(30px, 1.179rem + 2.143vw, 76px);
+    
+    @media screen and (max-width: 1520px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 992px) {
+      padding-bottom: 85px;
+    }
   }
 
   &__pagination {
@@ -56,6 +76,9 @@
     left: unset!important;
     right: 60px;
     width: unset!important;
+    @media screen and (max-width: 1520px) {
+      right: 30px;
+    }
   }
 
   &__title {
@@ -65,18 +88,28 @@
 
   &__text {
     color: $gray;
+    @media screen and (max-width: 1520px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__button-wrapper {
     img {
+      max-block-size: unset;
       position: absolute;
-      bottom: 0;
-      right: 310px;
+      bottom: -65px;
+      right: -165px;
+    }
+
+    @media screen and (max-width: 1520px) {
+      display: flex;
+      justify-content: center;
     }
 
   }
   
   &__button {
+    position: relative;
     padding: 21px 39px;
   }
 
