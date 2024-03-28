@@ -1,0 +1,43 @@
+.video-about-us {
+  &__container {
+    @include paddingLR;
+    @include mb-last-section;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 41.4% auto;
+    gap: clamp(30px, -1.393rem + 4.286vw, 76px);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text-wrapper {
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    color: $gray;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include mb-s;
+  }
+
+  &__text {
+    @include mb-l;
+  }
+
+  &__button {
+    padding: 15px 29px;
+  }
+}

@@ -4,9 +4,32 @@
 
 @mixin paddingLR {
   padding: 0 clamp(0px, -1.393rem + 4.286vw, 60px);
-
 }
 
 @mixin paddingTBLR {
+  padding: clamp(20px, -1.393rem + 4.286vw, 60px);
+}
 
+@mixin mb-section {
+ margin-bottom: clamp(60px, 2.357rem + 4.286vw, 120px);
+}
+
+@mixin mb-last-section {
+  margin-bottom: clamp(75px, 2.357rem + 4.286vw, 150px);
+}
+
+@mixin mb-xl {
+  margin-bottom: clamp(30px, 1.179rem + 2.143vw, 60px)
+}
+
+@mixin mb-l {
+  margin-bottom: clamp(25px, 2.357rem + 4.286vw, 50px);
+}
+
+@mixin mb-m {
+  margin-bottom: clamp(20px, 2.357rem + 4.286vw, 40px);
+}
+
+@mixin mb-s {
+  margin-bottom: clamp(15px, 2.357rem + 4.286vw, 30px);
 }

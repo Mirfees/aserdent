@@ -13,7 +13,7 @@
 }
 
 .plain-text-s {
-  font-size: 18px;
+  font-size: clamp(13px, 0.696rem + 0.357vw, 18px);
   font-weight: 500;
   line-height: 23px;
   letter-spacing: 0em;

@@ -1,10 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+@@include('templates/head.html',{
+"title":"Акция"
+})
+
+@@include('templates/header.html')
+
 <body>
 
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item">
+                        <a href="/" class="breadcrumbs__list-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a href="/" class="breadcrumbs__list-link">Клиника</a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a href="/" class="breadcrumbs__list-link">Акции</a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a href="/actions.html" class="breadcrumbs__list-link active">"Скидка 10% при онлайн записи"</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="single-action">
+        <div class="single-action__container">
+            <div class="container">
+                <div class="single-action__title-wrapper">
+                    <div class="single-action__title">
+                        <div class="title-section">«Скидка 10% при онлайн записи»</div>
+                        <a href="#" class="single-action__button button button_color_gradient">Оставить заявку</a>
+                    </div>
+                    <div class="single-action__title-text">
+                        <p class="plain-text">Стоматологическая клиника «ProDent» в Астане — это инновационный медицинский центр, где вы без страха и боли сможете получить персональный план лечения с вежливым, индивидуальным подходом. Мы горячо любим и ценим каждого пациента и всегда ждём вас снова.</p>
+                        <p class="plain-text">Наши врачи — это профессионалы своего дела с многолетним опытом, которые регулярно проходят необходимые курсы по повышению квалификации.</p>
+                        <p class="plain-text">Главной миссией стоматологии является высококачественная диагностика и восстановление пациентов с помощью передовых технологий, методов, материалов и конечно же оборудования. У нас имеются аппараты, которых нет нигде во всем городе, исключением является только лишь наша клиника.</p>
+                        <p class="single-action__date-validity plain-text ">Акция действует до 25.04.2021 включительно</p>
+                    </div>
+                </div>
+                <div class="single-action__wrapper">
+                    <div class="single-action__img">
+                        <div class="single-action__date">11.02.2024</div>
+                        <img src="img/single-action.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 </body>
-</html>
+
+@@include('templates/footer.html')

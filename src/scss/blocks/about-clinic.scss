@@ -1,6 +1,6 @@
 .about-clinic {
   &__container {
-    margin-bottom: 60px;
+    margin-bottom: clamp(30px, 1.179rem + 2.143vw, 60px);
   }
 
   &__wrapper {
@@ -8,11 +8,11 @@
     gap: 93px;
     @include paddingLR;
     
-    @media screen and (max-width: 1440px) {
+    @media (max-width: 1440px) {
       gap: 0;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media (max-width: 1200px) {
       flex-direction: column;
       padding: 0;
     }

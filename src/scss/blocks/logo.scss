@@ -1,7 +1,6 @@
 .logo {
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
     align-items: center;
     gap: 20px;
   }

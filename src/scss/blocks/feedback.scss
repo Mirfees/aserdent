@@ -1,17 +1,17 @@
 .feedback {
   &__container {
-    margin-bottom: 120px;
+    @include mb-section;
   }
 
   &__wrapper {
     position: relative;
-    padding: 60px;
+    padding: clamp(20px, -1.393rem + 4.286vw, 60px);
     background-color: #F3F3F5;
     border-radius: 32px;
   }
 
   &__title-wrapper {
-    margin-bottom: 50px;
+    @include mb-l;
   }
 
   &__title-subtitle {
@@ -24,7 +24,7 @@
   }
 
   &__swiper {
-    margin-bottom: 50px;
+    @include mb-l;
   }
 
   &__swiper-wrapper {
@@ -75,6 +75,11 @@
       max-block-size: unset;
       left: 43%;
       top: -146px;
+      
+      @media (max-width: 520px) {
+        left: 50%;
+        top: -124px;
+      }
     }
   }
 
@@ -91,6 +96,7 @@
     bottom: 74px;
     display: flex;
     gap: 55px;
+    z-index: 9;
   }
 
   .swiper-button-prev::after {

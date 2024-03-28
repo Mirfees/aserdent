@@ -1,6 +1,6 @@
 .our-services {
   &__container {
-    margin-bottom: 120px;
+    @include mb-section;
   }
 
   &__wrapper {
@@ -8,7 +8,7 @@
   }
 
   &__title-wrapper {
-    margin-bottom: 50px;
+    @include mb-l;
   }
 
   &__title-subtitle {
@@ -24,12 +24,12 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 50px 20px;
 
-    @media screen and (max-width: 1520px){
+    @media (max-width: 1520px){
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 20px 0;
+      grid-gap: 20px;
     }
 
-    @media screen and (max-width: 820px){
+    @media (max-width: 820px){
       grid-template-columns: 1fr;
       justify-items: center;
     }
@@ -50,6 +50,7 @@
 
      img{
        transition: transform 0.2s linear;
+       width: 100%;
      }
 
     img:hover {

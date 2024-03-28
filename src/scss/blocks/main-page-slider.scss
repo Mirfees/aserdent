@@ -1,6 +1,6 @@
 .main-page-slider {
   &__container {
-    margin-bottom: 120px;
+    @include mb-section;
   }
 
   &__swiper {
@@ -16,7 +16,7 @@
     display: flex;
     gap: 55px;
 
-    @media screen and (max-width: 992px) {
+    @media (max-width: 992px) {
       right: unset;
       bottom: 20px;
     }
@@ -36,14 +36,14 @@
     background-color: #F3F3F5;
     border-radius: 22px;
 
-    @media screen and (max-width: 1520px) {
+    @media (max-width: 1520px) {
       display: flex;
       flex-direction: column;
     }
   }
 
   &__img-container {
-    @media screen and (max-width: 1520px) {
+    @media (max-width: 1520px) {
       text-align: center;
     }
   }
@@ -60,10 +60,10 @@
     padding: clamp(30px, 1.179rem + 2.143vw, 60px);
     padding-left: clamp(30px, 1.179rem + 2.143vw, 76px);
     
-    @media screen and (max-width: 1520px) {
+    @media (max-width: 1520px) {
       text-align: center;
     }
-    @media screen and (max-width: 992px) {
+    @media (max-width: 992px) {
       padding-bottom: 85px;
     }
   }
@@ -76,20 +76,20 @@
     left: unset!important;
     right: 60px;
     width: unset!important;
-    @media screen and (max-width: 1520px) {
+    @media (max-width: 1520px) {
       right: 30px;
     }
   }
 
   &__title {
-    margin-bottom: 30px;
+    @include mb-s;
     color: $black;
   }
 
   &__text {
     color: $gray;
-    @media screen and (max-width: 1520px) {
-      margin-bottom: 40px;
+    @media (max-width: 1520px) {
+      @include mb-m;
     }
   }
 
@@ -101,7 +101,7 @@
       right: -165px;
     }
 
-    @media screen and (max-width: 1520px) {
+    @media (max-width: 1520px) {
       display: flex;
       justify-content: center;
     }

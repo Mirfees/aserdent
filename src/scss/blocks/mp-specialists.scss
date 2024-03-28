@@ -1,6 +1,6 @@
 .mp-specialists {
   &__container {
-    margin-bottom: 120px;
+    @include mb-section;
   }
 
   &__wrapper {
@@ -22,6 +22,8 @@
   &__title {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   &__button {
@@ -34,9 +36,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    
+    @media (max-width: 1500px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 520px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     background-color: #F3F3F5;
     border-radius: 16px;
   }
@@ -48,6 +64,7 @@
     overflow: hidden;
     img {
       transition: transform 0.2s linear;
+      width: 100%;
       &:hover {
         transform: scale(120%);
       }
@@ -58,8 +75,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 30px;
-    padding-bottom: 30px;
+    padding: 0 clamp(15px, 0.589rem + 1.071vw, 30px);
+    padding-bottom: clamp(15px, 0.589rem + 1.071vw, 30px);
+    flex-grow: 1;
   }
 
   &__item-title-wrapper {
@@ -67,7 +85,6 @@
 
   &__item-title {
     line-height: 33.6px;
-    white-space: nowrap;
   }
 
   &__position {

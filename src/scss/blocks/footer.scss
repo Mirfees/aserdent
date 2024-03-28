@@ -4,7 +4,7 @@
   }
 
   &__wrapper {
-    padding: 60px;
+    @include paddingTBLR;
   }
 
   &__top {
@@ -12,6 +12,15 @@
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 110px;
     border-bottom: 2px solid #1F1F2912;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
   }
 
   &__info {
@@ -41,12 +50,13 @@
   &__menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
 
   &__col {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: clamp(10px, -0.043rem + 1.078vw, 20px);
 
     &:last-child {
       justify-self: end;
@@ -68,6 +78,11 @@
     justify-self: end;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 1200px) {
+      justify-self: start;
+      margin-top: 20px;
+    }
   }
 
   &__working-hours {
@@ -78,11 +93,12 @@
     letter-spacing: -0.01em;
   }
 
-  &__address {
-    margin-bottom: 30px;
-    font-size: 32px;
+  &__address,
+  &__tel {
+    @include mb-s;
+    font-size: clamp(20px, 0.971rem + 0.857vw, 32px);
     font-weight: 500;
-    line-height: 38.4px;
+    line-height: clamp(24px, 1.175rem + 1vw, 38px);
     letter-spacing: -0.02em;
   }
 
@@ -96,15 +112,10 @@
 
   &__tel {
     display: inline-block;
-    margin-bottom: 30px;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 38.4px;
-    letter-spacing: -0.02em;
   }
 
   &__button {
-    font-size: 18px;
+    font-size: clamp(13px, 0.696rem + 0.357vw, 18px);
     font-weight: 500;
     line-height: 21.6px;
     padding: 15px 30px;
@@ -116,6 +127,10 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 40px 0;
     color: $gray;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__copyright {
@@ -129,5 +144,9 @@
     justify-self: end;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 992px) {
+      justify-self: start;
+    }
   }
 }

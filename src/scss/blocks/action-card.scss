@@ -1,0 +1,55 @@
+.action-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F3F5;
+  border-radius: 16px;
+
+  &:hover {
+    .action-card__button {
+      color: #fff;
+      background: $viola;
+    }
+    img {
+      transform: scale(120%);
+    }
+  }
+  &__img {
+    overflow: hidden;
+    max-height: 312px;
+    border-radius: 16px;
+
+    img {
+      transition: transform 0.2s linear;
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: clamp(15px, 0.589rem + 1.071vw, 30px);
+    padding-bottom: clamp(15px, 0.589rem + 1.071vw, 30px);
+    gap: 20px;
+    flex-grow: 1;
+  }
+
+  &__title-wrapper {
+  }
+
+  &__button-wrapper {
+  }
+
+  &__button {
+    height: 48px;
+    padding: 14px 29px 16px 29px;
+  }
+
+  &__title {
+    line-height: 33.6px;
+  }
+
+  &__link {
+
+  }
+}

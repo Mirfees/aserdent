@@ -1,0 +1,41 @@
+.breadcrumbs {
+  &__container {
+    @include paddingLR;
+    padding-bottom: 40px;
+    padding-top: 60px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &-item {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 28px;
+        &::before {
+          position: absolute;
+          content: url("../img/breadcrumbs-arrow.svg");
+          width: 8px;
+          height: 2px;
+          right: -14px;
+        }
+      }
+    }
+    &-link {
+      font-size: clamp(13px, 0.696rem + 0.357vw, 18px);
+      transition: 0.2s ease-in-out;
+      white-space: nowrap;
+      &:hover {
+        color: $viola;
+      }
+      &.active {
+        color: $gray;
+        pointer-events: none;
+      }
+    }
+  }
+}

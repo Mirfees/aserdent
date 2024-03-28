@@ -1,6 +1,6 @@
 .slider-dentists {
   &__container {
-    margin-bottom: 60px;
+    @include mb-section;
   }
 
   &__swiper {
@@ -20,5 +20,14 @@
 
   &__pagination {
     position: relative;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $viola;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0;
+    top: 60px;
   }
 }

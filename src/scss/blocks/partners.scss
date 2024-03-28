@@ -1,15 +1,20 @@
 .partners {
   &__container {
-    margin-bottom: 120px;
+    @include mb-section;
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: auto 61.2%;
-    padding: 60px;
+    @include paddingTBLR;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title-wrapper {
+    margin-bottom: 20px;
   }
 
   &__title-subtitle {
@@ -25,6 +30,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+
+    @media (max-width: 1500px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 520px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {

@@ -1,0 +1,53 @@
+.about-specialist {
+  &__container {
+    @include mb-section;
+  }
+
+  &__title-img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-wrapper {
+    @include mb-l;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__title {
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    max-block-size: unset;
+
+    @media (max-width: 520px) {
+      right: -170px;
+    }
+  }
+
+  &__content {
+    @include paddingTBLR;
+    background-color: #f3f3f5;
+    border-radius: 32px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    background-color: #ffffff;
+    padding: clamp(15px, 0.589rem + 1.071vw, 30px);
+    border-radius: 16px;
+  }
+}

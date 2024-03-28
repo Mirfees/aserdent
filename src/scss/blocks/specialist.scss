@@ -1,0 +1,111 @@
+.specialist {
+
+  .breadcrumbs {
+    &__container {
+      padding: 0;
+      @include mb-m;
+    }
+  }
+  &__container {
+    @include paddingLR;
+    @include mb-section;
+    margin-top: 60px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 41% auto;
+    gap: clamp(45px, 1.745rem + 3.286vw, 91px);
+
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    img {
+      border-radius: 16px;
+    }
+  }
+
+  &__info {
+  }
+
+  &__title-wrapper {
+    @include mb-s;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    font-size: clamp(13px, 0.511rem + 0.929vw, 26px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 33.8px */
+  }
+
+  &__profile {
+  }
+
+  &__experience {
+    color: $gray;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 28.6px */
+    margin-bottom: 24px;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    @include mb-l;
+  }
+
+  &__skills-item {
+    padding: 10px 20px;
+    border-radius: 40px;
+    background-color: #F3F3F5;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    @include mb-xl;
+  }
+
+  &__contacts-label {
+    color: $gray;
+  }
+
+  &__contacts-link {
+  font-size: clamp(13px, 0.511rem + 0.929vw, 26px);
+  }
+
+  &__contacts-item {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__contacts-icon {
+  }
+
+  &__contacts-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__button-wrapper {
+  }
+
+  &__button {
+    padding: 14px 29px 16px 29px;
+    font-size: clamp(12px, 0.471rem + 0.857vw, 24px);
+  }
+}

@@ -1,0 +1,43 @@
+.pagination {
+  &__container {
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 8px;
+
+    &.number-page a{
+      width: clamp(30px, 1.457rem + 1.286vw, 48px);
+      background-color: #F3F3F5;
+      border-radius: 8px;
+
+      transition-property: color, background-color;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
+
+      &:hover {
+        background-color: $viola;
+        color: #fff;
+      }
+    }
+
+    &.active a{
+      background-color: $viola;
+      color: #fff;
+    }
+
+    &:last-child {
+      margin-left: 16px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(30px, 1.457rem + 1.286vw, 48px);
+  }
+}

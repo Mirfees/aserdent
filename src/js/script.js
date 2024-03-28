@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+    //begin BURGER-MENU
+
     let burgerMenu = document.getElementById('burger-menu');
     let overlay = document.querySelector('.header-menu');
     burgerMenu.addEventListener('click',function(){
         this.classList.toggle("close");
         overlay.classList.toggle("overlay");
     });
+
+    //end BURGER-MENU
 
     //begin SLIDERS
 
@@ -32,6 +36,16 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.slider-dentists__pagination',
         },
+
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+            },
+
+            0: {
+                slidesPerView: 1,
+            },
+        },
     });
 
     const sliderFeedback = new Swiper('.feedback__swiper', {
@@ -44,14 +58,33 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.feedback__pagination',
         },
 
-        // Navigation arrows
         navigation: {
             nextEl: '.feedback__next',
             prevEl: '.feedback__prev',
+        },
+
+        breakpoints: {
+            1000: {
+                slidesPerView: 3,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+
+            0: {
+                slidesPerView: 1,
+            },
         },
     });
 
     //end SLIDERS
 
+    //begin FANCYBOX
+
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
+    //end FANCYBOX
 
 });

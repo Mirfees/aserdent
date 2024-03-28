@@ -2,8 +2,8 @@
   height: 105px;
   &__container {
     position: fixed;
-    z-index: 10;
-    margin-bottom: 38px;
+    z-index: 20;
+    @include mb-m;
     width: 100%;
     background: #fff;
   }
@@ -14,7 +14,7 @@
     align-items: center;
     padding: 20px 60px;
 
-    @media screen and (max-width: 1440px) {
+    @media (max-width: 1440px) {
       padding: 20px 0px;
     }
   }

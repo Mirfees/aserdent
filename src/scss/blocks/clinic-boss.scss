@@ -8,6 +8,10 @@
     grid-template-columns: 37.76% auto;
     grid-gap: 0 76px;
     @include paddingLR;
+    
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__img {
@@ -16,8 +20,8 @@
   &__text-block {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    padding: 52px 0;
+    gap: clamp(20px, 0.554rem + 2.143vw, 50px);
+    padding: clamp(20px, 0.554rem + 2.143vw, 50px) 0;
   }
 
   &__title-wrapper {
