@@ -1,0 +1,78 @@
+.services-inner {
+  &__container {
+    @include paddingLR;
+  }
+
+  &__main-wrapper {
+  }
+
+  &__split-wrapper {
+    display: grid;
+    grid-template-columns: auto 27%;
+    gap: clamp(45px, 1.698rem + 3.429vw, 93px);
+    @include mb-section;
+  }
+
+  &__main {
+  }
+
+  &__title-wrapper {
+    @include mb-l;
+  }
+
+  &__title {
+  }
+
+  &__info {
+  }
+
+  &__paragraph {
+    &:not(:last-child) {
+      @include mb-xxl;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(8px, 0.314rem + 0.571vw, 16px);
+    color: $gray;
+
+    .title-h3 {
+      color: $black;
+    }
+  }
+
+  &__img-block {
+
+  }
+
+  &__img-block-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__img {
+  }
+
+  &__table-prices {
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 24px;
+
+    border-top: 1.5px solid #E8E8EE;
+
+    &:last-child {
+      border-bottom: 1.5px solid #E8E8EE;
+    }
+  }
+
+  &__table-header {
+  }
+
+  &__table-price {
+  }
+}

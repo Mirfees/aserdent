@@ -35,21 +35,4 @@
     flex-basis: 0;
     color: $gray;
   }
-
-  &__media-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  &__media-icons {
-    display: flex;
-    gap: 8px;
-  }
-
-  &__media-icon {
-    img {
-      pointer-events: none;
-    }
-  }
 }

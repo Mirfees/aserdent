@@ -1,0 +1,60 @@
+.single-action {
+  &__container {
+    @include paddingLR;
+  }
+
+  &__title-wrapper {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: clamp(30px, 0.413rem + 4.5vw, 93px);
+    @include mb-l;
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__button {
+    padding: 22px 65px;
+  }
+
+  &__title-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $gray;
+  }
+
+  &__date-validity {
+  }
+
+  &__wrapper {
+    @include mb-section;
+  }
+
+  &__img {
+    position: relative;
+    height: 524px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+  }
+
+  &__date {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 16px;
+  }
+}

@@ -1,4 +1,11 @@
 .our-services {
+  &_l {
+    &_main-services {
+     .our-services__container {
+       @include mb-last-section;
+     }
+    }
+  }
   &__container {
     @include mb-section;
   }
@@ -7,8 +14,25 @@
     @include paddingLR;
   }
 
-  &__title-wrapper {
+  &__title-wrapper,
+  &__title-button-wrapper {
     @include mb-l;
+  }
+
+  &__title-button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      gap: 20px;
+      align-items: start;
+    }
+  }
+
+  &__button {
+    padding: clamp(11px, 0.432rem + 0.786vw, 22px) clamp(32px, 1.234rem + 2.357vw, 65px);
   }
 
   &__title-subtitle {

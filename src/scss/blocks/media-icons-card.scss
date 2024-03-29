@@ -1,0 +1,18 @@
+.media-icons-card {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__icon {
+    img {
+      pointer-events: none;
+    }
+  }
+}

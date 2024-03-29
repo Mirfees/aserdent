@@ -1,4 +1,11 @@
 .feedback {
+  &_l {
+    &_main-services {
+      .feedback__container {
+        @include mb-last-section;
+      }
+    }
+  }
   &__container {
     @include mb-section;
   }
@@ -38,6 +45,12 @@
     padding: 30px;
     border-radius: 24px;
     min-height: 500px;
+    gap: 20px;
+
+    @media (max-width: 576px) {
+      min-height: 300px;
+
+    }
   }
 
   &__author {
@@ -79,6 +92,13 @@
       @media (max-width: 520px) {
         left: 50%;
         top: -124px;
+      }
+    }
+
+    &_img-right {
+      img {
+        left: unset;
+        right: 16%;
       }
     }
   }

@@ -15,7 +15,11 @@
 }
 
 @mixin mb-last-section {
-  margin-bottom: clamp(75px, 2.357rem + 4.286vw, 150px);
+  margin-bottom: clamp(75px, 2.946rem + 5.357vw, 150px);
+}
+
+@mixin mb-xxl {
+  margin-bottom: clamp(45px, 2.232rem + 1.786vw, 70px);
 }
 
 @mixin mb-xl {
@@ -23,13 +27,13 @@
 }
 
 @mixin mb-l {
-  margin-bottom: clamp(25px, 2.357rem + 4.286vw, 50px);
+  margin-bottom: clamp(25px, 0.982rem + 1.786vw, 50px);
 }
 
 @mixin mb-m {
-  margin-bottom: clamp(20px, 2.357rem + 4.286vw, 40px);
+  margin-bottom: clamp(20px, 0.786rem + 1.429vw, 40px);
 }
 
 @mixin mb-s {
-  margin-bottom: clamp(15px, 2.357rem + 4.286vw, 30px);
+  margin-bottom: clamp(15px, 0.589rem + 1.071vw, 30px);
 }

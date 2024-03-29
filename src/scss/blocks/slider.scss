@@ -1,0 +1,63 @@
+//Дополнение к swiper
+.slider {
+  &__container {
+    @include paddingLR;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    @include mb-l;
+  }
+
+  &__title {
+  }
+
+  &__nav {
+  }
+
+  &__prev {
+    position: relative;
+  }
+
+  &__next {
+    position: relative;
+  }
+
+  &__swiper {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    display: flex;
+  }
+
+  &__pagination {
+
+  }
+
+  &__img-container {
+  }
+
+  &__img {
+  }
+
+  .swiper-button-prev::after {
+    content: url("../img/arrow-left.svg");
+  }
+
+  .swiper-button-next::after {
+    content: url("../img/arrow-right.svg");
+  }
+
+  &__nav {
+    right: 60px;
+    bottom: 74px;
+    display: flex;
+    gap: 55px;
+    z-index: 9;
+  }
+}

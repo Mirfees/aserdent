@@ -19,6 +19,7 @@
     @media (max-width: 992px) {
       right: unset;
       bottom: 20px;
+      left: 30px;
     }
   }
 
@@ -110,7 +111,7 @@
   
   &__button {
     position: relative;
-    padding: 21px 39px;
+    padding: clamp(10px, 0.393rem + 0.714vw, 20px) clamp(20px, 0.786rem + 1.429vw, 40px);
   }
 
   .swiper-button-prev::after {

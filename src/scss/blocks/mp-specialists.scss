@@ -29,7 +29,7 @@
   &__button {
     display: flex;
     align-items: center;
-    padding: 21px 40px;
+    padding: clamp(10px, 0.393rem + 0.714vw, 20px) clamp(20px, 0.786rem + 1.429vw, 40px);
   }
 
   &__list {

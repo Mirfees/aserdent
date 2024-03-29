@@ -77,6 +77,60 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    const sliderActions = new Swiper('.slider-actions__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.slider-actions__next',
+            prevEl: '.slider-actions__prev',
+        },
+
+        breakpoints: {
+            1000: {
+                slidesPerView: 3,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+
+    const sliderSpecialists = new Swiper('.slider-specialists .swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.slider-specialists .swiper-button-next',
+            prevEl: '.slider-specialists .swiper-button-prev',
+        },
+
+        breakpoints: {
+
+            1500: {
+                slidesPerView: 4,
+            },
+            1000: {
+                slidesPerView: 3,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+
+            0: {
+                slidesPerView: 1,
+            },
+        },
+    });
+
     //end SLIDERS
 
     //begin FANCYBOX

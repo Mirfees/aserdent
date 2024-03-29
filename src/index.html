@@ -110,21 +110,7 @@
                 <div class="about-clinic__wrapper">
                     <div class="about-clinic__left">
                         <div class="title-section">Казахстанско-Германский центр имплантологии в городе Астана</div>
-
-                        <div class="about-clinic__media-wrapper">
-                            <p class="plain-text">Поделиться в соц. сетях</p>
-                            <div class="about-clinic__media-icons">
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-vk.svg" alt="">
-                                </a>
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-whatsapp.svg" alt="">
-                                </a>
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-telegram.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
+                        @@include('templates/media-icons-card.html')
                     </div>
                     
                     <div class="about-clinic__right">
@@ -138,8 +124,7 @@
         </div>
     </section>
 
-    @@include('templates/slider-dentists.html')
-
+    @@include('templates/dentist-pictures.html')
 
     <section class="why-we">
         <div class="why-we__container">

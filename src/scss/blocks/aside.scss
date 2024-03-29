@@ -1,0 +1,47 @@
+.aside {
+  position: relative;
+  &__container {
+    position: sticky;
+    top: 163px;
+  }
+
+  &__wrapper {
+    padding: clamp(15px, 0.589rem + 1.071vw, 30px);
+    border-radius: clamp(11px, 0.432rem + 0.786vw, 22px);
+    background: #F3F3F5;
+    width: clamp(238px, -4.5rem + 26.667vw, 440px);
+    margin-bottom: 20px;
+  }
+
+  &__title-wrapper {
+    margin-bottom: clamp(12px, 0.471rem + 0.857vw, 24px);
+
+    img {
+      position: absolute;
+      right: 25px;
+      top: -55px;
+    }
+  }
+
+  &__title {
+    line-height: 30px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__item {
+  }
+
+  &__button-wrapper {
+  }
+
+  &__button {
+    width: 100%;
+    text-align: center;
+    padding: 22px 125px;
+  }
+}

@@ -1,0 +1,8 @@
+.slider-specialists {
+  .slider {
+    &__container {
+      @include paddingLR;
+      @include mb-section;
+    }
+  }
+}

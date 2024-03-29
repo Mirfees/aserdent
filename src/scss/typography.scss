@@ -40,8 +40,20 @@
 .title-secondary {
   font-weight: 600;
   font-size: clamp(18px, 0.893rem + 0.714vw, 28px);
-  line-height: 60px;
+  line-height: clamp(30px, 1.179rem + 2.143vw, 60px);
   letter-spacing: -0.01em;
+}
+
+.title-h2 {
+  font-weight: 500;
+  font-size: clamp(16px, 0.629rem + 1.143vw, 32px);
+  line-height: clamp(20px, 0.762rem + 1.5vw, 41px);
+}
+
+.title-h3 {
+  font-weight: 500;
+  font-size: clamp(13px, 0.511rem + 0.929vw, 26px);
+  line-height: clamp(17px, 0.668rem + 1.214vw, 34px);
 }
 
 .title,
@@ -53,4 +65,9 @@
     background-clip: text;
     @include gradient;
   }
+}
+
+ul {
+  list-style: disc;
+  list-style-position: inside;
 }
