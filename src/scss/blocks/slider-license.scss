@@ -1,0 +1,7 @@
+.slider-license {
+  .slider {
+    &__container {
+      @include mb-last-section;
+    }
+  }
+}

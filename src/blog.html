@@ -1,10 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+@@include('templates/head.html',{
+"title":"Блог"
+})
 
-</body>
-</html>
+@@include('templates/header.html')
+
+    <body>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item">
+                        <a href="/" class="breadcrumbs__list-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a href="/blog.html" class="breadcrumbs__list-link active">Блог</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="blog__container">
+            <div class="container">
+                <div class="blog__title-wrapper">
+                    <div class="blog__title title-section">Блог</div>
+                    @@include('templates/media-icons-card.html')
+                </div>
+                <div class="blog__wrapper">
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-1.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-2.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-4.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-1.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-2.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-4.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-1.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-2.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-card__wrapper">
+                            <div class="blog-card__img">
+                                <img src="img/blog-4.png" alt="">
+                            </div>
+                            <div class="blog-card__desc">
+                                <div class="blog-card__text-wrapper">
+                                    <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                    <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                </div>
+                                <div class="blog-card__date-button-wrapper">
+                                    <div class="blog-card__date">11.02.2023</div>
+                                    <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @@include('templates/pagination.html')
+            </div>
+        </div>
+    </section>
+
+    </body>
+
+@@include('templates/footer.html')

@@ -1,9 +1,9 @@
 .slider-dentists {
   &__container {
-    @include mb-section;
   }
 
   &__swiper {
+    @include mb-xl;
   }
 
   &__wrapper {
@@ -19,7 +19,7 @@
   }
 
   &__pagination {
-    position: relative;
+    position: static;
   }
 
   .swiper-pagination-bullet-active {

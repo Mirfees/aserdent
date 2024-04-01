@@ -1,4 +1,4 @@
-.services-inner {
+.blog-inner {
   &__container {
     @include paddingLR;
   }
@@ -10,7 +10,6 @@
     display: grid;
     grid-template-columns: auto 27%;
     gap: clamp(45px, 1.698rem + 3.429vw, 93px);
-    @include mb-section;
 
     @media (max-width: 1500px) {
       grid-template-columns: auto 33%;
@@ -30,18 +29,5 @@
 
   &__title-wrapper {
     @include mb-l;
-  }
-
-  &__title {
-  }
-
-  &__info {
-  }
-
-  &__img-block {
-
-  }
-
-  &__img {
   }
 }

@@ -1,0 +1,32 @@
+.technology {
+  &__container {
+    @include paddingLR;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mb-xl;
+
+    @media (max-width: 992px) {
+      grid-template-columns: auto;
+      grid-gap: 20px;
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+  }
+
+  &__text {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 16px;
+    color: $gray;
+  }
+}

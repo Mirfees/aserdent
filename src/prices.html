@@ -1,10 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+@@include('templates/head.html',{
+"title":"Цены"
+})
+
+@@include('templates/header.html')
+
 <body>
 
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="/" class="breadcrumbs__list-link">Главная</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="/prices.html" class="breadcrumbs__list-link active">Цены</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="prices">
+    <div class="prices__container">
+        <div class="container">
+            <div class="prices__main-wrapper">
+                <div class="prices__split-wrapper">
+                    <div class="prices__main">
+                        <div class="prices__title-wrapper">
+                            <div class="prices__title title-section">Цены</div>
+                        </div>
+                        <div class="prices__tabs-container">
+                            <div class="prices__tab-titles mb-s">
+                                <div class="prices__tab-title active" data-tab-id="tab_01"><p class="plain-text">Имплантация зубов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_02"><p class="plain-text">Протезирование зубов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_03"><p class="plain-text">Лечение зубов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_04"><p class="plain-text">Чистка зубов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_05"><p class="plain-text">Удаление зубов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_06"><p class="plain-text">Лечение дёсен</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_07"><p class="plain-text">Установление брекетов</p></div>
+                                <div class="prices__tab-title" data-tab-id="tab_08"><p class="plain-text">Виниры</p></div>
+                            </div>
+                            <div class="prices__tabs">
+                                <div id="tab_01" class="prices__tab active">
+                                    <div class="table-prices mb-l">
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Южная Корея (1 штука)</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 150 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Швейцария (1 штука)</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 300 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Straumann
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 350 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Megagen</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 180 000 ₸</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab_02" class="prices__tab">
+                                    <div class="table-prices mb-l">
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Южная Корея (1 штука) 2 таб</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 150 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Швейцария (1 штука)</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 300 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Straumann
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 350 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Megagen</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 180 000 ₸</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab_03" class="prices__tab">
+                                    <div class="table-prices mb-l">
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Южная Корея (1 штука) 3 таб</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 150 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Швейцария (1 штука)</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 300 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Straumann
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 350 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Megagen</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 180 000 ₸</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab_04" class="prices__tab">
+                                    <div class="table-prices mb-l">
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Южная Корея (1 штука) 4 таб</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 150 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант зубной Швейцария (1 штука)</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 300 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Straumann
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 350 000 ₸</p></div>
+                                        </div>
+                                        <div class="table-prices__row">
+                                            <div class="table-prices__header">
+                                                <p class="table-prices__title plain-text">Имплант Megagen</p>
+                                                <p class="table-prices__subtitle plain-text-s">Имплант зубной, премиального качества, страна производитель Южная Корея (anyone)</p>
+                                            </div>
+                                            <div class="table-prices__price"><p class="plain-text">от 180 000 ₸</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @@include('templates/media-icons-card.html')
+                        </div>
+                    </div>
+                    <div class="aside">
+                        <div class="aside__container">
+                            <div class="aside__wrapper">
+                                <div class="aside__title-wrapper">
+                                    <div class="aside__title title-secondary">Услуги клиники</div>
+                                    <img src="img/jaw.png" alt="">
+                                </div>
+
+                                <div class="aside__list plain-text">
+                                    <div class="aside__item"><a href="#">Имплантация зубов</a></div>
+                                    <div class="aside__item"><a href="#">Протезирование зубов</a></div>
+                                    <div class="aside__item"><a href="#">Лечение зубов</a></div>
+                                    <div class="aside__item"><a href="#">Чистка зубов</a></div>
+                                    <div class="aside__item"><a href="#">Удаление зубов</a></div>
+                                    <div class="aside__item"><a href="#">Лечение дёсен</a></div>
+                                    <div class="aside__item"><a href="#">Установление брекетов</a></div>
+                                    <div class="aside__item"><a href="#">Виниры</a></div>
+                                </div>
+                            </div>
+                            <div class="aside__button-wrapper">
+                                <a href="#" class="aside__button button button_color_gradient">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
-</html>
+
+@@include('templates/footer.html')

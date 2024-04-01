@@ -58,69 +58,87 @@
         </div>
     </section>
 
-    @@include('templates/slider-dentists.html')
+    @@include('templates/slider-dentists.html', {
+    "pagination_display":"block",
+    "class_margin":"mb-section"
+    })
 
-    <section class="feedback">
-        <div class="feedback__container">
+    <section class="slider-feedback">
+        <div class="slider-feedback__container">
             <div class="container">
-                <div class="feedback__wrapper">
-                    <div class="feedback__title-nav-wrapper feedback__title-nav-wrapper_img-right">
+                <div class="slider-feedback__wrapper">
+                    <div class="slider-feedback__title-nav-wrapper slider-feedback__title-nav-wrapper_img-right">
                         <img src="img/hand-w-tooth.png" alt="">
-                        <div class="feedback__title-wrapper">
-                            <div class="feedback__title-subtitle plain-text-s">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
-                            <div class="feedback__title title-section">Что говорят наши клиенты</div>
+                        <div class="slider-feedback__title-wrapper">
+                            <div class="slider-feedback__title-subtitle plain-text-s">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+                            <div class="slider-feedback__title title-section">Что говорят наши клиенты</div>
                         </div>
-                        <div class="feedback__nav">
-                            <div class="feedback__prev swiper-button-prev"></div>
-                            <div class="feedback__next swiper-button-next"></div>
-                        </div>
-                    </div>
-                    <div class="feedback__swiper swiper">
-                        <div class="feedback__swiper-wrapper swiper-wrapper">
-                            <div class="feedback__slide swiper-slide">
-                                <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
-
-                                <div class="feedback__author">
-                                    <div class="feedback__name">Алиса Суворова</div>
-                                    <div class="feedback__date">14.08.2022</div>
-                                </div>
-                            </div>
-
-                            <div class="feedback__slide swiper-slide">
-                                <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
-
-                                <div class="feedback__author">
-                                    <div class="feedback__name">Алиса Суворова</div>
-                                    <div class="feedback__date">14.08.2022</div>
-                                </div>
-                            </div>
-
-                            <div class="feedback__slide swiper-slide">
-                                <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
-
-                                <div class="feedback__author">
-                                    <div class="feedback__name">Алиса Суворова</div>
-                                    <div class="feedback__date">14.08.2022</div>
-                                </div>
-                            </div>
-
-                            <div class="feedback__slide swiper-slide">
-                                <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
-
-                                <div class="feedback__author">
-                                    <div class="feedback__name">Алиса Суворова</div>
-                                    <div class="feedback__date">14.08.2022</div>
-                                </div>
-                            </div>
+                        <div class="slider-feedback__nav">
+                            <div class="slider-feedback__prev swiper-button-prev"></div>
+                            <div class="slider-feedback__next swiper-button-next"></div>
                         </div>
                     </div>
+                    <div class="slider-feedback__swiper swiper">
+                        <div class="slider-feedback__swiper-wrapper swiper-wrapper">
+                            <div class="slider-feedback__slide swiper-slide">
+                                <div class="feedback-card">
+                                    <div class="feedback-card__wrapper">
+                                        <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
 
-                    <div class="feedback__pagination swiper-pagination"></div>
+                                        <div class="feedback-card__author">
+                                            <div class="feedback-card__name">Алиса Суворова</div>
+                                            <div class="feedback-card__date">14.08.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-feedback__slide swiper-slide">
+                                <div class="feedback-card">
+                                    <div class="feedback-card__wrapper">
+                                        <p class="plain-text">Наблюдаемся здесь с обоими детьми и всегда всё нравилось. А сегодня прям восторг! С утра ребёнок встал с сильной болью, не может есть и вообще не очень самочувствие. Позвонили в надежде записаться к своему доктору, но у неё, к сожалению, не было мест, только на вечер. Предложили пройти осмотр у другого специалиста пораньше. Зашли. Осмотр… 5минут и минус зуб. Спасибо врачу.</p>
+
+                                        <div class="feedback-card__author">
+                                            <div class="feedback-card__name">Алиса Суворова</div>
+                                            <div class="feedback-card__date">14.08.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-feedback__slide swiper-slide">
+                                <div class="feedback-card">
+                                    <div class="feedback-card__wrapper">
+                                        <p class="plain-text">Хочу выразить огромную благодарность Диане Ишхановне! Мы пришли записываться на лечение под наркозом, так как моей дочери было 3 года, она не давала другим врачам даже смотреть зубы, а лечить надо было 11 зубов! А Диана Ишханова ее как-то уговорила и мы постепенно всё вылечили без наркоза!</p>
+
+                                        <div class="feedback-card__author">
+                                            <div class="feedback-card__name">Алиса Суворова</div>
+                                            <div class="feedback-card__date">14.08.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slider-feedback__slide swiper-slide">
+                                <div class="feedback-card">
+                                    <div class="feedback-card__wrapper">
+                                        <p class="plain-text">Хожу к доктору Макаровой Елене Витальевне уже более 10 лет. Она профессиональная, тактичная, приятная женщина. Сужу по состоянию моих зубов, у меня нет проблем с зубами, значит нет проблем с врачами, они хорошо лечатся.</p>
+
+                                        <div class="feedback-card__author">
+                                            <div class="feedback-card__name">Алиса Суворова</div>
+                                            <div class="feedback-card__date">14.08.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slider-feedback__pagination swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section class="video-about-us">
         <div class="video-about-us__container">

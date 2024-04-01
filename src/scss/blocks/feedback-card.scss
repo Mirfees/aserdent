@@ -1,0 +1,31 @@
+.feedback-card {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: clamp(15px, 0.606rem + 1.019vw, 30px);
+    border-radius: clamp(12px, 0.485rem + 0.815vw, 24px);
+    gap: 20px;
+    height: 100%;
+  }
+
+
+  &__author {
+  }
+
+  &__name {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+  }
+
+  &__date {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    color: $gray;
+  }
+}

@@ -71,3 +71,36 @@ ul {
   list-style: disc;
   list-style-position: inside;
 }
+
+.paragraph {
+  &:not(:last-child) {
+    @include mb-xxl;
+  }
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(8px, 0.314rem + 0.571vw, 16px);
+  color: $gray;
+
+  .title-h3 {
+    color: $black;
+  }
+}
+
+.img-block {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    gap: 20px;
+  }
+  &__date {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 12px 16px;
+    background: #fff;
+    border-radius: 16px;
+  }
+}

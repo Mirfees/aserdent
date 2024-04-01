@@ -1,10 +1,201 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+@@include('templates/head.html',{
+"title":"Внутренняя страница блога"
+})
+
+@@include('templates/header.html')
+
 <body>
 
+<section class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="/" class="breadcrumbs__list-link">Главная</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="/blog.html" class="breadcrumbs__list-link">Блог</a>
+                </li>
+                <li class="breadcrumbs__list-item">
+                    <a href="/blog-inner.html" class="breadcrumbs__list-link active">Трещина на зубе: какие бывают и почему это еще не конец</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="blog-inner">
+    <div class="blog-inner__container">
+        <div class="container">
+            <div class="blog-inner__main-wrapper">
+                <div class="blog-inner__split-wrapper">
+                    <div class="blog-inner__main">
+                        <div class="blog-inner__title-wrapper">
+                            <div class="blog-inner__title title-section">Трещина на зубе: какие бывают и почему это еще не конец</div>
+                        </div>
+                        <div class="paragraph">
+                            <div class="text-block mb-m">
+                                <p class="plain-text">Стоматологическая клиника «ProDent» в Астане — это инновационный медицинский центр, где вы без страха и боли сможете получить персональный план лечения с вежливым, индивидуальным подходом. Мы горячо любим и ценим каждого пациента и всегда ждём вас снова.</p>
+                                <p class="plain-text">Наши врачи — это профессионалы своего дела с многолетним опытом, которые регулярно проходят необходимые курсы по повышению квалификации.</p>
+                                <p class="plain-text">Главной миссией стоматологии является высококачественная диагностика и восстановление пациентов с помощью передовых технологий, методов, материалов и конечно же оборудования. У нас имеются аппараты, которых нет нигде во всем городе, исключением является только лишь наша клиника.</p>
+                            </div>
+                            <div class="img-block">
+                                <div class="img-block__wrapper">
+                                    <div class="img-block__date">11.02.2023</div>
+                                    <div class="services-inner__img">
+                                        <img src="img/service-inner-1.png" alt="">
+                                    </div>
+                                    <div class="services-inner__img">
+                                        <img src="img/service-inner-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @@include('templates/media-icons-card.html')
+                    </div>
+                    <div class="aside">
+                        <div class="aside__container">
+                            <div class="aside__wrapper">
+                                <div class="aside__title-wrapper">
+                                    <div class="aside__title title-secondary">Услуги клиники</div>
+                                    <img src="img/jaw.png" alt="">
+                                </div>
+
+                                <div class="aside__list plain-text">
+                                    <div class="aside__item"><a href="#">Имплантация зубов</a></div>
+                                    <div class="aside__item"><a href="#">Протезирование зубов</a></div>
+                                    <div class="aside__item"><a href="#">Лечение зубов</a></div>
+                                    <div class="aside__item"><a href="#">Чистка зубов</a></div>
+                                    <div class="aside__item"><a href="#">Удаление зубов</a></div>
+                                    <div class="aside__item"><a href="#">Лечение дёсен</a></div>
+                                    <div class="aside__item"><a href="#">Установление брекетов</a></div>
+                                    <div class="aside__item"><a href="#">Виниры</a></div>
+                                </div>
+                            </div>
+                            <div class="aside__button-wrapper">
+                                <a href="#" class="aside__button button button_color_gradient">Оставить заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slider slider-posts">
+    <div class="slider__container">
+        <div class="container">
+            <div class="slider__title-wrapper">
+                <div class="slider__title title-h3">Популярные посты</div>
+                <div class="slider__nav">
+                    <div class="slider__prev swiper-button-prev"></div>
+                    <div class="slider__next swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="slider__swiper swiper">
+                <div class="slider__wrapper swiper-wrapper">
+                    <div class="slider__slide swiper-slide">
+                        <div class="blog-card">
+                            <div class="blog-card__wrapper">
+                                <div class="blog-card__img">
+                                    <img src="img/blog-1.png" alt="">
+                                </div>
+                                <div class="blog-card__desc">
+                                    <div class="blog-card__text-wrapper">
+                                        <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                        <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                    </div>
+                                    <div class="blog-card__date-button-wrapper">
+                                        <div class="blog-card__date">11.02.2023</div>
+                                        <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                        <div class="blog-card">
+                            <div class="blog-card__wrapper">
+                                <div class="blog-card__img">
+                                    <img src="img/blog-2.png" alt="">
+                                </div>
+                                <div class="blog-card__desc">
+                                    <div class="blog-card__text-wrapper">
+                                        <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                        <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам.</div>
+                                    </div>
+                                    <div class="blog-card__date-button-wrapper">
+                                        <div class="blog-card__date">11.02.2023</div>
+                                        <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                        <div class="blog-card">
+                            <div class="blog-card__wrapper">
+                                <div class="blog-card__img">
+                                    <img src="img/blog-4.png" alt="">
+                                </div>
+                                <div class="blog-card__desc">
+                                    <div class="blog-card__text-wrapper">
+                                        <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                        <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                    </div>
+                                    <div class="blog-card__date-button-wrapper">
+                                        <div class="blog-card__date">11.02.2023</div>
+                                        <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                        <div class="blog-card">
+                            <div class="blog-card__wrapper">
+                                <div class="blog-card__img">
+                                    <img src="img/blog-2.png" alt="">
+                                </div>
+                                <div class="blog-card__desc">
+                                    <div class="blog-card__text-wrapper">
+                                        <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                        <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам.</div>
+                                    </div>
+                                    <div class="blog-card__date-button-wrapper">
+                                        <div class="blog-card__date">11.02.2023</div>
+                                        <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide swiper-slide">
+                        <div class="blog-card">
+                            <div class="blog-card__wrapper">
+                                <div class="blog-card__img">
+                                    <img src="img/blog-4.png" alt="">
+                                </div>
+                                <div class="blog-card__desc">
+                                    <div class="blog-card__text-wrapper">
+                                        <div class="blog-card__title title-h3">Как правильно чистить зубы детям до 7 лет?</div>
+                                        <div class="blog-card__text">Многие пациенты откладывали посещение к стоматологу из-за недостатка финансовых средств. Стоматология «ProDent» работает по доступным ценам. Наши врачи имеют 10-летний опыт работы и решения различных стоматологических проблем пациентов.</div>
+                                    </div>
+                                    <div class="blog-card__date-button-wrapper">
+                                        <div class="blog-card__date">11.02.2023</div>
+                                        <a href="/blog-inner.html" class="blog-card__button button_color_viola plain-text-s">Читать далее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
-</html>
+
+@@include('templates/footer.html')

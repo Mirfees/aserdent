@@ -1,0 +1,49 @@
+@@include('templates/head.html',{
+"title":"Технологии"
+})
+
+@@include('templates/header.html')
+
+<body>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__list-item">
+                        <a href="/" class="breadcrumbs__list-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__list-item">
+                        <a href="/technology.html" class="breadcrumbs__list-link active">Технологии</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="technology">
+        <div class="technology__container">
+            <div class="container">
+                <div class="technology__wrapper">
+                    <div class="technology__title-wrapper">
+                        <div class="technology__title title-section">Технологии</div>
+                        @@include('templates/media-icons-card.html')
+                    </div>
+
+                    <div class="technology__text">
+                        <p class="plaint-text">Стоматологическая клиника «ProDent» в Астане — это инновационный медицинский центр, где вы без страха и боли сможете получить персональный план лечения с вежливым, индивидуальным подходом. Мы горячо любим и ценим каждого пациента и всегда ждём вас снова.</p>
+                        <p class="plaint-text">Наши врачи — это профессионалы своего дела с многолетним опытом, которые регулярно проходят необходимые курсы по повышению квалификации.</p>
+                        <p class="plaint-text">Главной миссией стоматологии является высококачественная диагностика и восстановление пациентов с помощью передовых технологий, методов, материалов и конечно же оборудования. У нас имеются аппараты, которых нет нигде во всем городе, исключением является только лишь наша клиника.</p>
+                        <p class="plaint-text">Нам доверяют тысячи клиентов, потому что мы ответственно относимся ко всем нормам стерильности и следим за безопасностью всего процесса. Мы предлагаем полноценный спектр услуг, начиная с часто встречаемых заболеваний и заканчивая имплантацией и ортодонтическим лечением.</p>
+                    </div>
+                </div>
+            </div>
+            @@include('templates/slider-dentists.html',{
+            "pagination_display":"none",
+            "class_margin":"mb-last-section"
+            })
+        </div>
+    </section>
+</body>
+
+@@include('templates/footer.html')

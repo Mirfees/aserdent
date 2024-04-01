@@ -1,5 +1,8 @@
 .aside {
   position: relative;
+  @media (max-width: 992px) {
+    position: static;
+  }
   &__container {
     position: sticky;
     top: 163px;
@@ -9,7 +12,7 @@
     padding: clamp(15px, 0.589rem + 1.071vw, 30px);
     border-radius: clamp(11px, 0.432rem + 0.786vw, 22px);
     background: #F3F3F5;
-    width: clamp(238px, -4.5rem + 26.667vw, 440px);
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -40,8 +43,11 @@
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     text-align: center;
-    padding: 22px 125px;
+    padding: clamp(11px, 0.445rem + 0.747vw, 22px) 0px;
   }
 }
