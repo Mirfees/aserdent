@@ -95,13 +95,10 @@
   }
 
   &__button {
-    display: inline-block;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 24px */
-    padding: 19px 53px;
+    padding: clamp(10px, 0.416rem + 0.643vw, 19px) clamp(22px, 0.655rem + 2.214vw, 53px);
     align-items: center;
-    border-radius: 22px;
   }
 }

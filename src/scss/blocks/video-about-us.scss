@@ -15,9 +15,17 @@
   }
 
   &__thumbnail {
+    position: relative;
     img {
       width: 100%;
     }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
   }
 
   &__text-wrapper {

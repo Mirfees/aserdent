@@ -1,0 +1,48 @@
+.notfound {
+  &__container {
+    @include paddingLR;
+  }
+
+  &__wrapper {
+    padding: clamp(85px, 2.875rem + 7.5vw, 190px) 0;
+    background-image: url("../img/404.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+
+    @media (max-width: 992px) {
+      background-position: center center;
+    }
+  }
+
+  &__content {
+    max-width: 460px;
+  }
+
+  &__title {
+    svg {
+      width: clamp(270px, 14.9rem + 9.875vw, 428px);
+    }
+
+  }
+
+  &__text {
+  }
+
+  &__subtitle {
+    margin-bottom: clamp(12px, 0.471rem + 0.857vw, 24px);
+    font-size: clamp(15px, 0.589rem + 1.071vw, 30px);
+    font-weight: 500;
+    line-height: clamp(20px, 0.786rem + 1.429vw, 40px)
+  }
+
+  &__message {
+    color: $gray;
+  }
+
+  &__button-wrapper {
+  }
+
+  &__button {
+    padding: clamp(11px, 0.432rem + 0.786vw, 22px) clamp(31px, 1.218rem + 2.214vw, 62px);
+  }
+}

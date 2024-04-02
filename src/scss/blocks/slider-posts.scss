@@ -1,0 +1,7 @@
+.slider-posts {
+  .slider {
+    &__wrapper {
+      @include mb-last-section;
+    }
+  }
+}

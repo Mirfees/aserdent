@@ -9,9 +9,9 @@
 
   &__info {
     position: absolute;
-    top: 62px;
-    left: 62px;
-    padding: 50px;
+    top: clamp(30px, 0.542rem + 2.778vw, 62px);
+    left: clamp(30px, 0.542rem + 2.778vw, 62px);
+    padding: clamp(25px, 0.521rem + 2.17vw, 50px);
     background-color: #fff;
     border-radius: 32px;
     width: clamp(400px, 12.64rem + 19.935vw, 585px);
@@ -66,5 +66,10 @@
   }
 
   &__media-item {
+  }
+
+  iframe {
+    border-radius: 32px;
+    overflow: hidden;
   }
 }

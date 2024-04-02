@@ -109,3 +109,58 @@
         </div>
     </div>
 </header>
+<div class="modal hidden">
+    <form class="modal__form" action="" method="POST" name="modal_feedback" id="modal_feedback">
+        <div class="modal__title mb-s">Оставьте заявку</div>
+        <div class="modal__desc">
+            <p class="plain-text">Мы обработаем вашу заявку и свяжемся с вами</p>
+        </div>
+        <div class="form-error"></div>
+        <div class="modal__row-wrapper mb-s">
+            <div class="modal__row">
+                <input data-req="required" type="text" placeholder="Ваше имя" name="modal_feedback_first_name" id="modal_feedback_first_name">
+            </div>
+            <div class="modal__row">
+                <input data-req="required" type="tel" placeholder="Ваш телефон" name="modal_feedback_phone_number" id="modal_feedback_phone_number">
+            </div>
+            <div class="modal__row">
+                <textarea name="modal_feedback_message" id="modal_feedback_message" placeholder="Сообщение"></textarea>
+            </div>
+        </div>
+        <div class="modal__row modal__button-policy-wrapper">
+            <button type="submit" class="modal__button button button_color_gradient">Записаться на консультацию</button>
+            <p class="plain-text-s policy">Нажимая кнопку "Отправить" вы даёте согласие на обработку <a href="#" class="policy-link">персональных данных</a></p>
+        </div>
+    </form>
+</div>
+
+<div class="modal hidden">
+    <form class="modal__form" action="" method="POST" name="modal_vacancy" id="modal_vacancy">
+        <div class="modal__title mb-s">Отклик на вакансию</div>
+        <div class="modal__desc">
+            <p class="plain-text">Мы обработаем вашу заявку и свяжемся с вами</p>
+        </div>
+        <div class="form-error"></div>
+        <div class="modal__row-wrapper mb-s">
+            <div class="modal__row">
+                <input data-req="required" type="text" placeholder="Ваше имя" name="modal_vacancy_first_name" id="modal_vacancy_first_name">
+            </div>
+            <div class="modal__row">
+                <input data-req="required" type="tel" placeholder="Ваш телефон" name="modal_vacancy_phone_number" id="modal_vacancy_phone_number">
+            </div>
+            <div class="modal__row">
+                <input data-req="required" type="email" placeholder="Ваш email" name="modal_vacancy_email" id="modal_vacancy_email">
+            </div>
+            <div class="modal__row">
+                <label for="modal_vacancy_resume" class="input-file">
+                    <span class="button_color_viola">выбрать файл резюме</span>
+                    <input data-req="required" type="file" placeholder="выбрать файл резюме" name="modal_vacancy_resume" id="modal_vacancy_resume">
+                </label>
+            </div>
+        </div>
+        <div class="modal__row modal__button-policy-wrapper">
+            <button type="submit" class="modal__button button button_color_gradient">Отправить отклик</button>
+            <p class="plain-text-s policy">Нажимая кнопку "Отправить" вы даёте согласие на обработку <a href="#" class="policy-link">персональных данных</a></p>
+        </div>
+    </form>
+</div>

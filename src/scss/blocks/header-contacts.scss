@@ -1,8 +1,8 @@
 .header-contacts {
   &__wrapper {
     display: flex;
-    gap: 35px;
-    color: $gray;
+    gap: clamp(10px, -4.955rem + 5.952vw, 35px);
+    color: #828286;
     
     @media (max-width: 768px) {
       display: none;

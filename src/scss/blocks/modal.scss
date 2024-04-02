@@ -1,0 +1,53 @@
+.modal {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 572px;
+    padding: clamp(23px, 0.904rem + 1.643vw, 46px);
+    padding-bottom: clamp(20px, 0.786rem + 1.429vw, 40px);
+    border-radius: clamp(16px, 0.629rem + 1.143vw, 32px);
+
+    .f-button {
+      top: 30px!important;
+      right: 30px!important;
+      color: #5E5E6B63;
+      background-color: transparent!important;
+    }
+  }
+
+  &__title {
+    font-size: clamp(20px, 0.786rem + 1.429vw, 40px);
+    line-height: clamp(24px, 0.943rem + 1.714vw, 48px);
+    font-weight: 600;
+    color: $black;
+  }
+
+  &__desc {
+    margin-bottom: 22px;
+  }
+
+  &__row {
+  }
+
+  &__row-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__button-policy-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: clamp(11px, 0.432rem + 0.786vw, 22px);
+  }
+
+}
+
+.hidden {
+  display: none;
+}

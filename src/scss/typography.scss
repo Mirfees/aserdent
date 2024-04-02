@@ -97,10 +97,15 @@ ul {
   }
   &__date {
     position: absolute;
-    top: 24px;
-    left: 24px;
-    padding: 12px 16px;
+    top: clamp(12px, 0.471rem + 0.857vw, 24px);
+    left: clamp(12px, 0.471rem + 0.857vw, 24px);
+    padding: clamp(6px, 0.236rem + 0.429vw, 12px) clamp(8px, 0.314rem + 0.571vw, 16px);
     background: #fff;
-    border-radius: 16px;
+    border-radius: clamp(8px, 0.314rem + 0.571vw, 16px);
   }
+}
+
+.subtitle {
+  color: $gray;
+  text-transform: uppercase;
 }

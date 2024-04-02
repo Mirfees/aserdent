@@ -1,14 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
     //begin BURGER-MENU
-
     let burgerMenu = document.getElementById('burger-menu');
     let overlay = document.querySelector('.header-menu');
     burgerMenu.addEventListener('click',function(){
         this.classList.toggle("close");
         overlay.classList.toggle("overlay");
     });
-
     //end BURGER-MENU
+
+    //begin DROPDOWN
+    delegate(document, '.header-menu__dropdown, html', 'click', function(e){
+        if (this.closest('.dropdown-menu')) {
+            let dropdown = this.closest('.dropdown-menu').querySelector('.dropdown-menu__list');
+            let cl = dropdown.classList;
+            let animation = dropdown.animate([
+                { opacity: 1 },
+                { opacity: 0 }
+            ], { duration: 100 });
+
+            if(cl.contains('active')){
+                animation.addEventListener('finish', function(){
+                    cl.remove('active');
+                });
+            }
+            else{
+                cl.add('active');
+                dropdown.animate([
+                    { opacity: 0 },
+                    { opacity: 1 }
+                ], { duration: 100 });
+            }
+        } else {
+            let dropdownLists = document.querySelectorAll('.dropdown-menu__list');
+            dropdownLists.forEach(dropdownList => {
+                let cl = dropdownList.classList;
+                let animation = dropdownList.animate([
+                    { opacity: 1 },
+                    { opacity: 0 }
+                ], { duration: 100 });
+
+                if(cl.contains('active')){
+                    animation.addEventListener('finish', function(){
+                        cl.remove('active');
+                    });
+                }
+            });
+        }
+    });
+    //end DROPDOWN
 
     //begin TABS
     const pricesTabsContainer = document.querySelector('.prices__tabs-container');
@@ -41,11 +80,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
     //end TABS
 
-    //begin SLIDERS
+    //begin input-file
+    document.querySelector('.input-file input[type=file]').addEventListener('change', function() {
+        let file = this.files[0];
+        let label = this.closest('.input-file');
+        let button = label.querySelector('.button_color_viola');
+        button.innerHTML = file.name;
+    });
+    //end input-file
 
+    //begin SLIDERS
     const mainPageSlider = new Swiper('.main-page-slider__swiper', {
         direction: 'horizontal',
         loop: true,
@@ -215,15 +261,66 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     //end SLIDERS
 
     //begin FANCYBOX
-
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });
-
     //end FANCYBOX
 
+    //begin PHONE MASK
+    phoneMatrix('[type="tel"]', '+7 (___) ___ __ __');
+    //end PHONE MASK
 });
+
+//begin CUSTOM FUNCTIONS
+function delegate(box, selector, eventName, handler){
+    box.addEventListener(eventName, function(e){
+        let elem = e.target.closest(selector);
+
+        if(elem !== null && box.contains(elem)){
+            handler.call(elem, e);
+        }
+    });
+}
+
+function phoneMatrix(selector, matrix = '+7 (___) ___ __ __') {
+    [].forEach.call( document.querySelectorAll(selector), function(input) {
+        let keyCode;
+        function mask(event) {
+            event.keyCode && (keyCode = event.keyCode);
+            let pos = this.selectionStart;
+            if (pos < 3) event.preventDefault();
+            let i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, ""),
+                new_value = matrix.replace(/[_\d]/g, function(a) {
+                    return i < val.length ? val.charAt(i++) : a
+                });
+            i = new_value.indexOf("_");
+            if (i !== -1) {
+                i < 5 && (i = 3);
+                new_value = new_value.slice(0, i)
+            }
+            let reg = matrix.substring(0, this.value.length).replace(/_+/g,
+                function(a) {
+                    return "\\d{1," + a.length + "}"
+                }).replace(/[+()]/g, "\\$&");
+            reg = new RegExp("^" + reg + "$");
+            if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+                this.value = new_value;
+            }
+            if (event.type === "blur" && this.value.length < 5) {
+                this.value = "";
+            }
+        }
+
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, false);
+        input.addEventListener("keydown", mask, false);
+
+    });
+}
+//end CUSTOM FUNCTIONS

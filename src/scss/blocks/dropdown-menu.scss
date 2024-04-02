@@ -1,8 +1,19 @@
 .dropdown-menu {
+  position: relative;
   &__list {
+    position: absolute;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    background-color: #fff;
+    box-shadow: 0px 0px 13.2px 0px rgba(0, 0, 0, 0.08);
+    list-style: none;
     &.active {
-      display: block;
+      display: flex;
+
     }
   }
 
@@ -10,5 +21,6 @@
   }
 
   &__link {
+    font-size: clamp(16px, 0.907rem + 0.286vw, 20px);
   }
 }

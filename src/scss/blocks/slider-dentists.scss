@@ -1,5 +1,6 @@
 .slider-dentists {
   &__container {
+    @include paddingLR;
   }
 
   &__swiper {
@@ -13,9 +14,11 @@
   }
 
   &__img-container {
+    border-radius: 22px;
   }
 
   &__img {
+
   }
 
   &__pagination {

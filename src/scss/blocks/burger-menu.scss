@@ -8,19 +8,19 @@
   z-index: 3;
 
   span {
-    background: #0C4E8A;
     display: block;
     height: 4px;
     opacity: 1;
     position: absolute;
+    background-color: $viola;
     transition: 0.3s ease-in-out;
 
     &:before, &:after {
-      background: #0C4E8A;
       display: block;
       height: 4px;
       opacity: 1;
       position: absolute;
+      background-color: $viola;
       transition: 0.3s ease-in-out;
     }
 
@@ -49,11 +49,13 @@
     transform: rotate(-45deg);
     top: 13px;
     width: 27px;
+    background-color: #fff;
 
     &:before {
       top: 0px;
       transform: rotate(90deg);
       width: 27px;
+      background-color: #fff;
     }
 
     &:after {
@@ -62,6 +64,7 @@
       transform: rotate(90deg);
       opacity: 0;
       width: 0;
+      background-color: #fff;
     }
   }
 

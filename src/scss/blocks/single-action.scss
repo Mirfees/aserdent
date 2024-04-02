@@ -23,7 +23,7 @@
   }
 
   &__button {
-    padding: 22px 65px;
+    padding: clamp(11px, 0.432rem + 0.786vw, 22px) clamp(32px, 1.234rem + 2.357vw, 65px);
   }
 
   &__title-text {

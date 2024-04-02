@@ -29,9 +29,24 @@
       color: #fff;
     }
 
-    &:last-child {
+    &.next {
       margin-left: 16px;
     }
+
+    &.prev {
+      margin-right: 16px;
+    }
+
+    &.next,
+    &.prev {
+      transition: color linear 0.2s;
+    }
+
+    &.next:hover,
+    &.prev:hover {
+      color: $viola;
+    }
+
   }
 
   &__link {

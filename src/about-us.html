@@ -29,22 +29,9 @@
             <div class="container">
                 <div class="about-clinic__wrapper">
                     <div class="about-clinic__left">
-                        <div class="title-section">Казахстанско-Германский центр имплантологии <span> в городе Астана</span></div>
+                        <div class="title-section">Казахстанско-Германский центр имплантологии <br> <span> в городе Астана</span></div>
 
-                        <div class="about-clinic__media-wrapper">
-                            <p class="plain-text">Поделиться в соц. сетях</p>
-                            <div class="about-clinic__media-icons">
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-vk.svg" alt="">
-                                </a>
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-whatsapp.svg" alt="">
-                                </a>
-                                <a href="" class="about-clinic__media-icon">
-                                    <img src="img/about-clinic-telegram.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
+                        @@include('templates/media-icons-card.html')
                     </div>
 
                     <div class="about-clinic__right">
@@ -70,7 +57,7 @@
                     <div class="slider-feedback__title-nav-wrapper slider-feedback__title-nav-wrapper_img-right">
                         <img src="img/hand-w-tooth.png" alt="">
                         <div class="slider-feedback__title-wrapper">
-                            <div class="slider-feedback__title-subtitle plain-text-s">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+                            <div class="slider-feedback__subtitle subtitle  subtitle  plain-text-s">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
                             <div class="slider-feedback__title title-section">Что говорят наши клиенты</div>
                         </div>
                         <div class="slider-feedback__nav">
@@ -145,20 +132,26 @@
             <div class="container">
                 <div class="video-about-us__wrapper">
                     <div class="video-about-us__thumbnail">
+                        <div class="video-about-us__icon" data-src="https://www.youtube.com/watch?v=RvvNaYmqmAk&t=793s" data-fancybox="gallery">
+                            <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="46" height="46" rx="8" fill="white" fill-opacity="0.24"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M31.0704 28.2218L31.0683 29.2218L33.0683 29.226L33.0704 28.226L33.0989 14.4622L33.1009 13.458L32.0967 13.4602L18.3341 13.4898L17.3341 13.492L17.3384 15.492L18.3384 15.4898L29.6809 15.4654L14.2944 30.8519L13.5873 31.559L15.0015 32.9732L15.7086 32.2661L31.0938 16.8809L31.0704 28.2218Z" fill="white"/>
+                            </svg>
+                        </div>
                         <a href="https://www.youtube.com/watch?v=RvvNaYmqmAk&t=793s" data-fancybox="gallery">
                             <img src="img/video-thumb.png" />
                         </a>
                     </div>
 
                     <div class="video-about-us__text-wrapper">
-                        <div class="video-about-us__subtitle plain-text-s">видео о клинике</div>
+                        <div class="video-about-us__subtitle subtitle  plain-text-s">видео о клинике</div>
                         <div class="video-about-us__title title-section">Познакомьтесь с нами ближе</div>
                         <div class="video-about-us__text">
                             <p class="plain-text">
                                 Стоматологическая клиника «ProDent» в Астане — это инновационный медицинский центр, где вы без страха и боли сможете получить персональный план лечения с вежливым, индивидуальным подходом. Мы горячо любим и ценим каждого пациента и всегда ждём вас снова.
                             </p>
                         </div>
-                        <a href="#" class="video-about-us__button button button_color_gradient">Записаться на консультацию</a>
+                        <a data-fancybox data-src="#modal_feedback" href="javascript:;" class="video-about-us__button button button_color_gradient">Записаться на консультацию</a>
                     </div>
                 </div>
             </div>

@@ -7,7 +7,7 @@
   }
   &__wrapper {
     display: flex;
-    gap: clamp(5px, -0.314rem + 1.929vw, 32px);
+    gap: clamp(7px, -5.143rem + 5.952vw, 32px);
 
     .header-contacts__wrapper {
       display: none;
@@ -40,9 +40,18 @@
   }
 
   &__link {
+    font-size: clamp(16px, 0.907rem + 0.286vw, 20px);
   }
 
   &__dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      display: flex;
+      content: url("../img/arrow-down.svg");
+      margin-left: 7px;
+    }
   }
 
   @media (max-width: 1500px) {
