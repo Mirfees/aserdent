@@ -12,36 +12,44 @@ document.addEventListener('DOMContentLoaded', function () {
     delegate(document, '.header-menu__dropdown, html', 'click', function(e){
         if (this.closest('.dropdown-menu')) {
             let dropdown = this.closest('.dropdown-menu').querySelector('.dropdown-menu__list');
-            let cl = dropdown.classList;
+            let linkWithArrow = this.closest('.dropdown-menu').querySelector('.header-menu__dropdown');
+            let dropdownClassList = dropdown.classList;
             let animation = dropdown.animate([
                 { opacity: 1 },
                 { opacity: 0 }
             ], { duration: 100 });
 
-            if(cl.contains('active')){
+
+            
+            if(dropdownClassList.contains('active')){
+                linkWithArrow.classList.remove('active');
                 animation.addEventListener('finish', function(){
-                    cl.remove('active');
+                    dropdownClassList.remove('active');
                 });
             }
             else{
-                cl.add('active');
+                dropdownClassList.add('active');
+                linkWithArrow.classList.add('active');
                 dropdown.animate([
                     { opacity: 0 },
                     { opacity: 1 }
                 ], { duration: 100 });
             }
         } else {
-            let dropdownLists = document.querySelectorAll('.dropdown-menu__list');
-            dropdownLists.forEach(dropdownList => {
-                let cl = dropdownList.classList;
+            let dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(dropdown => {
+                let dropdownList = dropdown.querySelector('.dropdown-menu__list');
+                let linkWithArrow = dropdown.querySelector('.header-menu__dropdown');
+                let dropdownClassList = dropdownList.classList;
                 let animation = dropdownList.animate([
                     { opacity: 1 },
                     { opacity: 0 }
                 ], { duration: 100 });
 
-                if(cl.contains('active')){
+                if(dropdownClassList.contains('active')){
+                    linkWithArrow.classList.remove('active');
                     animation.addEventListener('finish', function(){
-                        cl.remove('active');
+                        dropdownClassList.remove('active');
                     });
                 }
             });
@@ -50,36 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //end DROPDOWN
 
     //begin TABS
-    const pricesTabsContainer = document.querySelector('.prices__tabs-container');
-    const tabTitleClass = 'prices__tab-title';
-    const tabClass = 'prices__tab';
-    if (pricesTabsContainer) {
-        pricesTabsContainer.addEventListener('click', (e) => {
-            let target = e.target;
-
-            if(target.closest(`.${tabTitleClass}`)) {
-                let tabTitle = (target.closest(`.${tabTitleClass}`));
-                let tabTitles = pricesTabsContainer.querySelectorAll(`.${tabTitleClass}`);
-                let tabId = tabTitle.dataset.tabId;
-                let tab = pricesTabsContainer.querySelector('#' + tabId);
-                let tabs = pricesTabsContainer.querySelectorAll(`.${tabClass}`);
-
-                tabTitles.forEach(title => {
-                    title.classList.remove('active');
-                });
-
-                tabs.forEach(tab => {
-                    tab.classList.remove('active');
-
-                    if (tab.id === tabId) {
-                        tab.classList.add('active');
-                    }
-                });
-
-                tabTitle.classList.add('active');
-            }
-        });
-    }
+    const priceTabs = new Tabs('.prices__tabs-container');
     //end TABS
 
     //begin input-file
@@ -106,7 +85,18 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.main-page-slider__prev',
         },
     });
+    const sliderBeforeAfter = new Swiper('.before-after__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        allowTouchMove: false,
 
+        // Navigation arrows
+        navigation: {
+            nextEl: '.before-after__next',
+            prevEl: '.before-after__prev',
+        },
+    });
     const sliderDentists = new Swiper('.slider-dentists__swiper', {
         direction: 'horizontal',
         loop: true,
@@ -128,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     const sliderFeedback = new Swiper('.slider-feedback__swiper', {
         direction: 'horizontal',
         loop: true,
@@ -157,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     const sliderActions = new Swiper('.slider-actions__swiper', {
         direction: 'horizontal',
         loop: true,
@@ -182,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     const sliderSpecialists = new Swiper('.slider-specialists .swiper', {
         direction: 'horizontal',
         loop: true,
@@ -211,7 +198,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     const sliderLicense = new Swiper('.slider-license .swiper', {
         direction: 'horizontal',
         loop: true,
@@ -236,7 +222,6 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         },
     });
-
     const sliderPosts = new Swiper('.slider-posts .swiper', {
         direction: 'horizontal',
         loop: true,
@@ -272,6 +257,13 @@ document.addEventListener('DOMContentLoaded', function () {
     //begin PHONE MASK
     phoneMatrix('[type="tel"]', '+7 (___) ___ __ __');
     //end PHONE MASK
+
+    //begin SLIDER-BEFORE-AFTER
+    const sliderBeforeAfter1 = new SliderBeforeAfter('.container-slider-1');
+    const sliderBeforeAfter2 = new SliderBeforeAfter('.container-slider-2');
+    const sliderBeforeAfter3 = new SliderBeforeAfter('.container-slider-3');
+    const sliderBeforeAfter4 = new SliderBeforeAfter('.container-slider-4');
+    //end SLIDER-BEFORE-AFTER
 });
 
 //begin CUSTOM FUNCTIONS
@@ -324,3 +316,126 @@ function phoneMatrix(selector, matrix = '+7 (___) ___ __ __') {
     });
 }
 //end CUSTOM FUNCTIONS
+
+//begin CUSTOM CLASSES
+class SliderBeforeAfter {
+    constructor (sliderContainer) {
+        this.rootElement = document.querySelector(sliderContainer);
+        this.slider = this.rootElement.querySelector('.slider-comparison');
+        this.before = this.slider.querySelector('.before');
+        this.beforeImage = this.before.querySelector('img');
+        this.change = this.slider.querySelector('.change');
+        this.body = document.body;
+        this.isActive = false;
+
+        let width = this.slider.offsetWidth;
+        this.beforeImage.style.width = `${width}px`;
+
+        this.rootElement.addEventListener('mouseup', () => {
+            this.isActive = false;
+        });
+
+        this.rootElement.addEventListener('mousedown', () => {
+            this.isActive = true;
+        });
+
+        this.rootElement.addEventListener('mouseleave', () => {
+            this.isActive = false;
+        });
+
+        this.rootElement.addEventListener('mousemove', (e) => {
+            if (!this.isActive) {
+                return;
+            }
+
+            let x = e.pageX;
+
+            x -= this.slider.getBoundingClientRect().left;
+            this.#beforeAfterSlider(x);
+            this.#pauseEvents(e);
+        });
+
+        this.rootElement.addEventListener('touchstart', () => {
+            this.isActive = true;
+        });
+
+        this.rootElement.addEventListener('touchend', () => {
+            this.isActive = false;
+        });
+
+        this.rootElement.addEventListener('touchcancel', () => {
+            this.isActive = false;
+        });
+
+        this.rootElement.addEventListener('touchmove', (e) => this.#moveSlideMobile(e));
+
+        window.addEventListener('resize',  () => {
+            let width = this.slider.offsetWidth;
+            this.beforeImage.style.width = `${width}px`;
+        });
+    }
+
+    #beforeAfterSlider (x) {
+        let shift = Math.max(0, Math.min(x, this.slider.offsetWidth));
+        this.before.style.width = `${shift}px`;
+        this.change.style.left = `${shift}px`;
+    }
+
+    #pauseEvents (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        return false;
+    }
+
+    #moveSlideMobile (e) {
+        if (!this.isActive) {
+            return;
+        }
+
+        let x;
+        let i;
+
+        for (i = 0; i < e.changedTouches.length; i++) {
+            x = e.changedTouches[i].pageX;
+        }
+
+        x -= this.slider.getBoundingClientRect().left;
+        this.#beforeAfterSlider(x);
+        this.#pauseEvents(e);
+    }
+}
+//end CUSTOM CLASSES
+
+class Tabs {
+    constructor(tabsContainerSelector) {
+        this.tabsContainer = document.querySelector(tabsContainerSelector);
+        this.tabTitleClass = 'prices__tab-title';
+        this.tabClass = 'prices__tab';
+
+        this.tabsContainer.addEventListener('click', (e) => {
+            let target = e.target;
+
+            if(target.closest(`.${this.tabTitleClass}`)) {
+                let tabTitle = (target.closest(`.${this.tabTitleClass}`));
+                let tabTitles = this.tabsContainer.querySelectorAll(`.${this.tabTitleClass}`);
+                let tabId = tabTitle.dataset.tabId;
+                let tab = this.tabsContainer.querySelector('#' + tabId);
+                let tabs = this.tabsContainer.querySelectorAll(`.${this.tabClass}`);
+
+                tabTitles.forEach(title => {
+                    title.classList.remove('active');
+                });
+
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+
+                    if (tab.id === tabId) {
+                        tab.classList.add('active');
+                    }
+                });
+
+                tabTitle.classList.add('active');
+            }
+        });
+    }
+}

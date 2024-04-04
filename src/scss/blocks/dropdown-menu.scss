@@ -3,6 +3,8 @@
   &__list {
     position: absolute;
     display: none;
+    right: 30px;
+    top: 45px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -13,14 +15,22 @@
     list-style: none;
     &.active {
       display: flex;
+    }
 
+    @media (max-width: 1500px) {
+      position: static;
+      background-color: transparent;
+      box-shadow: unset;
     }
   }
 
   &__item {
+    width: 100%;
   }
 
   &__link {
+    display: block;
     font-size: clamp(16px, 0.907rem + 0.286vw, 20px);
+    white-space: nowrap;
   }
 }

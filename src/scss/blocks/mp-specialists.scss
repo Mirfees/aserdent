@@ -62,6 +62,7 @@
     max-height: 286px;
     border-radius: 16px;
     overflow: hidden;
+    max-block-size: unset;
     img {
       transition: transform 0.2s linear;
       width: 100%;

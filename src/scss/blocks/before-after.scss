@@ -1,0 +1,89 @@
+.before-after {
+  &_l {
+    &_main-services {
+      .feedback__container {
+        @include mb-last-section;
+      }
+    }
+  }
+  &__container {
+    @include mb-section;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 26.9% auto;
+    gap: clamp(30px, 0.482rem + 4.286vw, 90px);
+    position: relative;
+    @include paddingTBLR;
+    background-color: #F3F3F5;
+    border-radius: 32px;
+    background: url("../img/camera.png") no-repeat left center #F3F3F5;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: auto;
+      background: url("../img/camera.png") no-repeat left 100% #F3F3F5;
+    }
+  }
+
+  &__title-wrapper {
+    @include mb-l;
+  }
+
+  &__title-subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__swiper-wrapper {
+  }
+
+  &__pagination {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  &__title-nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  &__prev {
+    position: relative;
+  }
+
+  &__next {
+    position: relative;
+  }
+
+  &__nav {
+    justify-content: end;
+    right: 60px;
+    bottom: 74px;
+    display: flex;
+    gap: 55px;
+    z-index: 9;
+  }
+
+  .swiper-button-prev::after {
+    content: url("../img/arrow-left.svg");
+  }
+
+  .swiper-button-next::after {
+    content: url("../img/arrow-right.svg");
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $viola;
+  }
+}
