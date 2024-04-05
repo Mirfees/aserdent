@@ -3,7 +3,7 @@
     visibility: visible;
     opacity: 1;
     padding-top: 100px;
-    background: rgb(57, 177, 193, 90%);
+    background: rgb(57, 177, 193);
   }
   &__wrapper {
     display: flex;
@@ -66,19 +66,20 @@
   }
 
   @media (max-width: 1500px) {
-    & {
-      z-index: 2;
-      min-width: 100%;
-      min-height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 0;
-      visibility: hidden;
-      opacity: 0;
-      text-align: center;
-      padding-top: 20px;
-      transition: all 0.3s ease-in-out;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
   }
 }

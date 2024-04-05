@@ -164,3 +164,8 @@ textarea {
 .policy-link {
   border-bottom: 1px dashed;
 }
+
+.floating-img {
+/*  transform: translate(-50%, -50%);*/
+  //width: clamp(120px, 4.018rem + 10.714vw, 270px);
+}

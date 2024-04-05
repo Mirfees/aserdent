@@ -11,7 +11,7 @@
   }
 
   &__title-wrapper {
-    margin-bottom: 83px;
+    margin-bottom: clamp(25px, 0.216rem + 4.143vw, 83px);
   }
 
   &__subtitle {
@@ -40,11 +40,13 @@
   }
 
   &__item {
-    display: grid;
-    grid-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     max-width: 300px;
+
     @media (max-width: 820px){
-      justify-items: center;
+      align-items: center;
       text-align: center;
     }
   }
