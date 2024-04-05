@@ -321,58 +321,59 @@ function phoneMatrix(selector, matrix = '+7 (___) ___ __ __') {
 class SliderBeforeAfter {
     constructor (sliderContainer) {
         this.rootElement = document.querySelector(sliderContainer);
-        this.slider = this.rootElement.querySelector('.slider-comparison');
-        this.before = this.slider.querySelector('.before');
-        this.beforeImage = this.before.querySelector('img');
-        this.change = this.slider.querySelector('.change');
-        this.body = document.body;
-        this.isActive = false;
-
-        let width = this.slider.offsetWidth;
-        this.beforeImage.style.width = `${width}px`;
-
-        this.rootElement.addEventListener('mouseup', () => {
+        if (this.rootElement) {
+            this.slider = this.rootElement.querySelector('.slider-comparison');
+            this.before = this.slider.querySelector('.before');
+            this.beforeImage = this.before.querySelector('img');
+            this.change = this.slider.querySelector('.change');
+            this.body = document.body;
             this.isActive = false;
-        });
-
-        this.rootElement.addEventListener('mousedown', () => {
-            this.isActive = true;
-        });
-
-        this.rootElement.addEventListener('mouseleave', () => {
-            this.isActive = false;
-        });
-
-        this.rootElement.addEventListener('mousemove', (e) => {
-            if (!this.isActive) {
-                return;
-            }
-
-            let x = e.pageX;
-
-            x -= this.slider.getBoundingClientRect().left;
-            this.#beforeAfterSlider(x);
-            this.#pauseEvents(e);
-        });
-
-        this.rootElement.addEventListener('touchstart', () => {
-            this.isActive = true;
-        });
-
-        this.rootElement.addEventListener('touchend', () => {
-            this.isActive = false;
-        });
-
-        this.rootElement.addEventListener('touchcancel', () => {
-            this.isActive = false;
-        });
-
-        this.rootElement.addEventListener('touchmove', (e) => this.#moveSlideMobile(e));
-
-        window.addEventListener('resize',  () => {
             let width = this.slider.offsetWidth;
             this.beforeImage.style.width = `${width}px`;
-        });
+
+            this.rootElement.addEventListener('mouseup', () => {
+                this.isActive = false;
+            });
+
+            this.rootElement.addEventListener('mousedown', () => {
+                this.isActive = true;
+            });
+
+            this.rootElement.addEventListener('mouseleave', () => {
+                this.isActive = false;
+            });
+
+            this.rootElement.addEventListener('mousemove', (e) => {
+                if (!this.isActive) {
+                    return;
+                }
+
+                let x = e.pageX;
+
+                x -= this.slider.getBoundingClientRect().left;
+                this.#beforeAfterSlider(x);
+                this.#pauseEvents(e);
+            });
+
+            this.rootElement.addEventListener('touchstart', () => {
+                this.isActive = true;
+            });
+
+            this.rootElement.addEventListener('touchend', () => {
+                this.isActive = false;
+            });
+
+            this.rootElement.addEventListener('touchcancel', () => {
+                this.isActive = false;
+            });
+
+            this.rootElement.addEventListener('touchmove', (e) => this.#moveSlideMobile(e));
+
+            window.addEventListener('resize',  () => {
+                let width = this.slider.offsetWidth;
+                this.beforeImage.style.width = `${width}px`;
+            });
+        }
     }
 
     #beforeAfterSlider (x) {
@@ -412,30 +413,33 @@ class Tabs {
         this.tabTitleClass = 'prices__tab-title';
         this.tabClass = 'prices__tab';
 
-        this.tabsContainer.addEventListener('click', (e) => {
-            let target = e.target;
 
-            if(target.closest(`.${this.tabTitleClass}`)) {
-                let tabTitle = (target.closest(`.${this.tabTitleClass}`));
-                let tabTitles = this.tabsContainer.querySelectorAll(`.${this.tabTitleClass}`);
-                let tabId = tabTitle.dataset.tabId;
-                let tab = this.tabsContainer.querySelector('#' + tabId);
-                let tabs = this.tabsContainer.querySelectorAll(`.${this.tabClass}`);
+        if (this.tabsContainer) {
+            this.tabsContainer.addEventListener('click', (e) => {
+                let target = e.target;
 
-                tabTitles.forEach(title => {
-                    title.classList.remove('active');
-                });
+                if(target.closest(`.${this.tabTitleClass}`)) {
+                    let tabTitle = (target.closest(`.${this.tabTitleClass}`));
+                    let tabTitles = this.tabsContainer.querySelectorAll(`.${this.tabTitleClass}`);
+                    let tabId = tabTitle.dataset.tabId;
+                    let tab = this.tabsContainer.querySelector('#' + tabId);
+                    let tabs = this.tabsContainer.querySelectorAll(`.${this.tabClass}`);
 
-                tabs.forEach(tab => {
-                    tab.classList.remove('active');
+                    tabTitles.forEach(title => {
+                        title.classList.remove('active');
+                    });
 
-                    if (tab.id === tabId) {
-                        tab.classList.add('active');
-                    }
-                });
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active');
 
-                tabTitle.classList.add('active');
-            }
-        });
+                        if (tab.id === tabId) {
+                            tab.classList.add('active');
+                        }
+                    });
+
+                    tabTitle.classList.add('active');
+                }
+            });
+        }
     }
 }
