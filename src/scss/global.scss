@@ -172,5 +172,12 @@ textarea {
 
 .swiper-button-prev,
 .swiper-button-next {
-  width: unset;
+  width: 46px;
+  height: 46px;
+  color: $gray;
+  transition: color 0.2s linear;
+
+  &:hover {
+    color: $viola;
+  }
 }
