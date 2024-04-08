@@ -52,12 +52,22 @@
   }
 
   &__tel {
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__address {
   }
 
   &__email {
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__media {
