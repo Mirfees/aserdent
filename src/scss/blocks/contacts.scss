@@ -66,6 +66,44 @@
   }
 
   &__media-item {
+    circle,
+    path,
+    rect {
+      transition: fill 0.2s linear;
+    }
+
+    &.whatsapp:hover {
+      path {
+        fill: #F3F3F6;
+
+        &.aaa {
+          fill: #9755ee;
+        }
+      }
+      circle {
+        fill: #9755ee;
+      }
+    }
+
+    &.insta:hover {
+      path {
+        fill: #F3F3F6;
+
+        &.aaa {
+          fill: #9755ee;
+        }
+      }
+      circle {
+        fill: #9755ee;
+      }
+      rect {
+        fill: #9755ee;
+      }
+    }
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   iframe {

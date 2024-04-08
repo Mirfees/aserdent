@@ -45,8 +45,12 @@
   }
 
   &__media-link {
-    transition: fill 0.2s linear;
-    &:hover {
+    circle,
+    path {
+      transition: fill 0.2s linear;
+    }
+
+    &.insta:hover {
       circle {
         fill: #1F1F29;
       }
@@ -59,10 +63,12 @@
       circle {
         fill: #1F1F29;
       }
+
       path {
         fill: #DEDEE2;
 
-        &:last-child {
+        //грязный хак Исправить
+        &.aaa {
           fill: #1F1F29;
         }
       }
@@ -171,7 +177,15 @@
   &__copyright {
   }
 
-  &__policy {
+  &__policy,
+  &__created-by {
+    a {
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $viola;
+      }
+    }
   }
 
   &__created-by {
