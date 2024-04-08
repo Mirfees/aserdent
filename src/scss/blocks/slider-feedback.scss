@@ -54,10 +54,28 @@
       max-block-size: unset;
       left: 43%;
       top: -146px;
-      
-      @media (max-width: 520px) {
-        left: 50%;
-        top: -124px;
+
+      @media (max-width: 1500px) {
+        width: 200px;
+      }
+
+      @media (max-width: 1200px) {
+        left: 47%;
+        top: -105px;
+      }
+
+      @media (max-width: 992px) {
+        width: 160px;
+      }
+
+      @media (max-width: 768px) {
+        left: 55%;
+        top: -84px;
+      }
+
+      @media (max-width: 600px) {
+        left: 71%;
+        top: -112px;
       }
     }
 

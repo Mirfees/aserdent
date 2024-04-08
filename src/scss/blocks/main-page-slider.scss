@@ -25,10 +25,16 @@
 
   &__prev {
     position: relative;
+    @media (max-width: 1500px) {
+      color: #fff;
+    }
   }
 
   &__next {
     position: relative;
+    @media (max-width: 1500px) {
+      color: #fff;
+    }
   }
 
   &__slide {
@@ -145,5 +151,23 @@
 
   .swiper-pagination-bullet-active {
     background: $viola;
+  }
+
+  .floating-img {
+    @media (max-width: 1720px) {
+      bottom: -60px;
+      right: -104px;
+      width: 194px;
+    }
+    @media (max-width: 1200px) {
+      bottom: -50px;
+      right: -95px;
+      width: 170px;
+    }
+    @media (max-width: 992px) {
+      bottom: -40px;
+      right: -88px;
+      width: 143px;
+    }
   }
 }
