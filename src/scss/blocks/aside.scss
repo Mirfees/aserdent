@@ -37,6 +37,13 @@
   }
 
   &__item {
+    a {
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $viola;
+      }
+    }
   }
 
   &__button-wrapper {
