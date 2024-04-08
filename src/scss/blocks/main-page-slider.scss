@@ -103,6 +103,10 @@
     @media (max-width: 1500px) {
       right: 30px;
     }
+
+    @media (max-width: 520px) {
+      right: 7px;
+    }
   }
 
   &__title {
@@ -149,8 +153,18 @@
     content: '';
   }
 
+  .swiper-pagination-bullet {
+    @media (max-width: 1500px) {
+      background: #fff;
+      opacity: 1;
+    }
+  }
+
   .swiper-pagination-bullet-active {
     background: $viola;
+    @media (max-width: 1500px) {
+      background:$viola;
+    }
   }
 
   .floating-img {

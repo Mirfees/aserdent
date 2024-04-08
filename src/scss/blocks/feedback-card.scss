@@ -21,14 +21,14 @@
   &__name {
     font-size: 22px;
     font-weight: 500;
-    line-height: 26px;
+    line-height: 120%;
     letter-spacing: 0em;
   }
 
   &__date {
     font-size: 14px;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 130%;
     letter-spacing: 0em;
     color: $gray;
   }
