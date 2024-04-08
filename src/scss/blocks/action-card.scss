@@ -40,12 +40,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 29px;
+    padding: clamp(7px, 0.252rem + 0.571vw, 15px) clamp(15px, 0.613rem + 1vw, 29px);
     color: $viola;
     background: linear-gradient(90deg, rgba(183,111,255,1) 30%, rgba(57,177,193,1) 70%);
     position: relative;
     z-index: 1;
-    border-radius: 14px;
+    border-radius: clamp(7px, 0.275rem + 0.5vw, 14px);
     font-weight: 500;
     transition: color 0.2s linear;
 
@@ -58,7 +58,7 @@
       background-color: #f3f3f5;
       opacity: 1;
       transition: opacity 0.2s linear;
-      border-radius: 14px;
+      border-radius: clamp(7px, 0.275rem + 0.5vw, 14px);
       border: 2px solid $viola;
     }
 
