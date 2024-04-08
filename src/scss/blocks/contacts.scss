@@ -20,6 +20,7 @@
       padding: 0px;
       position: static;
       margin-bottom: 20px;
+      width: 100%;
     }
   }
 
@@ -52,12 +53,22 @@
   }
 
   &__tel {
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__address {
   }
 
   &__email {
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__media {
@@ -66,6 +77,44 @@
   }
 
   &__media-item {
+    circle,
+    path,
+    rect {
+      transition: fill 0.2s linear;
+    }
+
+    &.whatsapp:hover {
+      path {
+        fill: #F3F3F6;
+
+        &.aaa {
+          fill: #9755ee;
+        }
+      }
+      circle {
+        fill: #9755ee;
+      }
+    }
+
+    &.insta:hover {
+      path {
+        fill: #F3F3F6;
+
+        &.aaa {
+          fill: #9755ee;
+        }
+      }
+      circle {
+        fill: #9755ee;
+      }
+      rect {
+        fill: #9755ee;
+      }
+    }
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   iframe {

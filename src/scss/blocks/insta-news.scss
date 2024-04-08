@@ -20,9 +20,25 @@
       top: -155px;
       right: 0;
       max-block-size: unset;
+      @media (max-width: 1500px) {
+        width: 200px;
+      }
+
+      @media (max-width: 1200px) {
+        top: -105px;
+      }
 
       @media (max-width: 992px) {
-        top: -170px;
+        top: -83px;
+        width: 160px;
+      }
+
+      @media (max-width: 768px) {
+        top: -84px;
+      }
+
+      @media (max-width: 600px) {
+        top: -95px;
       }
     }
   }

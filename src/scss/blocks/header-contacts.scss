@@ -12,6 +12,7 @@
   &__media {
     display: flex;
     gap: 10px;
+    visibility: visible;
 
     a {
       display: flex;
@@ -19,6 +20,32 @@
       align-items: center;
       svg {
         pointer-events: none;
+      }
+
+      circle,
+      path {
+        transition-property: fill stroke;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+      }
+
+      &:hover {
+        path {
+          fill: $viola;
+        }
+        circle {
+          stroke: $viola;
+        }
+      }
+
+      &.whatsapp:hover {
+        path {
+          fill: $viola;
+
+          &:last-child {
+            fill: #FAFAFA;
+          }
+        }
       }
     }
   }

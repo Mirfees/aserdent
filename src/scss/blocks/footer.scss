@@ -34,7 +34,7 @@
     margin-bottom: 93px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 125%;
     color: $gray;
     max-width: 330px;
   }
@@ -45,6 +45,38 @@
   }
 
   &__media-link {
+    circle,
+    path {
+      transition: fill 0.2s linear;
+    }
+
+    &.insta:hover {
+      circle {
+        fill: #1F1F29;
+      }
+      path {
+        fill: #DEDEE2;
+      }
+    }
+
+    &.whatsapp:hover {
+      circle {
+        fill: #1F1F29;
+      }
+
+      path {
+        fill: #DEDEE2;
+
+        //грязный хак Исправить
+        &.aaa {
+          fill: #1F1F29;
+        }
+      }
+    }
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   &__menu {
@@ -71,6 +103,11 @@
   &__link {
     color: $black;
     font-weight: 500;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__contacts {
@@ -89,7 +126,7 @@
     margin-bottom: 12px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 19.2px;
+    line-height: 120%;
     letter-spacing: -0.01em;
   }
 
@@ -98,15 +135,20 @@
     @include mb-s;
     font-size: clamp(20px, 0.971rem + 0.857vw, 32px);
     font-weight: 500;
-    line-height: clamp(24px, 1.175rem + 1vw, 38px);
+    line-height: 120%;
     letter-spacing: -0.02em;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__for-contact {
     margin-bottom: 12px;
     font-size: 16px;
     font-weight: 500;
-    line-height: 19.2px;
+    line-height: 120%;
     letter-spacing: -0.01em;
   }
 
@@ -117,7 +159,7 @@
   &__button {
     font-size: clamp(13px, 0.696rem + 0.357vw, 18px);
     font-weight: 500;
-    line-height: 21.6px;
+    line-height: 120%;
     padding: 15px 30px;
     border-radius: 14px;
 
@@ -140,7 +182,15 @@
   &__copyright {
   }
 
-  &__policy {
+  &__policy,
+  &__created-by {
+    a {
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $viola;
+      }
+    }
   }
 
   &__created-by {

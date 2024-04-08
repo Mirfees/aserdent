@@ -43,7 +43,7 @@
   &__text {
     color: $gray;
     font-size: clamp(13px, 0.404rem + 0.679vw, 20px);
-    line-height: clamp(15px, 0.525rem + 0.883vw, 26px);
+    line-height: 130%;
   }
 
   &__button {

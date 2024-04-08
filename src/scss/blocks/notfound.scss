@@ -32,7 +32,7 @@
     margin-bottom: clamp(12px, 0.471rem + 0.857vw, 24px);
     font-size: clamp(15px, 0.589rem + 1.071vw, 30px);
     font-weight: 500;
-    line-height: clamp(20px, 0.786rem + 1.429vw, 40px)
+    line-height: 130%;
   }
 
   &__message {

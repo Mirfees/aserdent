@@ -41,6 +41,11 @@
 
   &__link {
     font-size: clamp(16px, 0.907rem + 0.286vw, 20px);
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__dropdown {
@@ -70,13 +75,13 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    visibility: hidden;
     min-width: 100%;
     min-height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     height: 0;
-    visibility: hidden;
     opacity: 0;
     text-align: center;
     padding-top: 20px;

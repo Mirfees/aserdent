@@ -5,10 +5,6 @@
   border-radius: 16px;
 
   &:hover {
-    .action-card__button {
-      color: #fff;
-      background: $viola;
-    }
     img {
       transform: scale(120%);
     }
@@ -41,12 +37,41 @@
   }
 
   &__button {
-    height: 48px;
-    padding: 14px 29px 16px 29px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(7px, 0.252rem + 0.571vw, 15px) clamp(15px, 0.613rem + 1vw, 29px);
+    color: $viola;
+    background: linear-gradient(90deg, rgba(183,111,255,1) 30%, rgba(57,177,193,1) 70%);
+    position: relative;
+    z-index: 1;
+    border-radius: clamp(7px, 0.275rem + 0.5vw, 14px);
+    font-weight: 500;
+    transition: color 0.2s linear;
+
+    &::before {
+      content:'';
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: #f3f3f5;
+      opacity: 1;
+      transition: opacity 0.2s linear;
+      border-radius: clamp(7px, 0.275rem + 0.5vw, 14px);
+      border: 2px solid $viola;
+    }
+
+    &:hover::before {
+      opacity: 0;
+    }
+    &:hover {
+      color: #fff;
+    }
   }
 
   &__title {
-    line-height: 33.6px;
+    line-height: 120%;
   }
 
   &__link {

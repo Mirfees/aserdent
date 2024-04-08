@@ -8,7 +8,7 @@
 .plain-text {
   font-size: clamp(16px, 0.861rem + 0.429vw, 22px);
   font-weight: 400;
-  line-height: clamp(22.6px, 1.273rem + 0.429vw, 28.6px);
+  line-height: 130%;
   letter-spacing: 0em;
 }
 
@@ -26,34 +26,34 @@
 .title {
   font-weight: 700;
   font-size: clamp(23px, 0.743rem + 2.714vw, 64px);
-  line-height: clamp(36px, 1.298rem + 2.929vw, 77px);
+  line-height: 120%;
   letter-spacing: -0.01em;
 }
 
 .title-section {
   font-weight: 600;
   font-size: clamp(22px, 0.725rem + 2vw, 50px);
-  line-height: clamp(28px, 1.007rem + 2.286vw, 60px);
+  line-height: 120%;
   letter-spacing: -0.01em;
 }
 
 .title-secondary {
   font-weight: 600;
   font-size: clamp(18px, 0.893rem + 0.714vw, 28px);
-  line-height: clamp(30px, 1.179rem + 2.143vw, 60px);
+  line-height: 120%;
   letter-spacing: -0.01em;
 }
 
 .title-h2 {
   font-weight: 500;
   font-size: clamp(16px, 0.629rem + 1.143vw, 32px);
-  line-height: clamp(20px, 0.762rem + 1.5vw, 41px);
+  line-height: 130%;
 }
 
 .title-h3 {
   font-weight: 500;
   font-size: clamp(13px, 0.511rem + 0.929vw, 26px);
-  line-height: clamp(17px, 0.668rem + 1.214vw, 34px);
+  line-height: 130%;
 }
 
 .title,

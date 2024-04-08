@@ -27,7 +27,7 @@
   }
 
   &__title {
-    line-height: 30px;
+    line-height: 120%;
   }
 
   &__list {
@@ -37,6 +37,13 @@
   }
 
   &__item {
+    a {
+      transition: color 0.2s linear;
+
+      &:hover {
+        color: $viola;
+      }
+    }
   }
 
   &__button-wrapper {

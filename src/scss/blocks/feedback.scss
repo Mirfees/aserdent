@@ -50,7 +50,7 @@
     @include mb-m;
     font-size: clamp(15px, 0.606rem + 1.019vw, 30px);
     font-weight: 500;
-    line-height: clamp(16px, 0.558rem + 1.359vw, 36px);
+    line-height: 150%;
   }
 
   &__media {
