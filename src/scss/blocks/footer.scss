@@ -45,6 +45,32 @@
   }
 
   &__media-link {
+    transition: fill 0.2s linear;
+    &:hover {
+      circle {
+        fill: #1F1F29;
+      }
+      path {
+        fill: #DEDEE2;
+      }
+    }
+
+    &.whatsapp:hover {
+      circle {
+        fill: #1F1F29;
+      }
+      path {
+        fill: #DEDEE2;
+
+        &:last-child {
+          fill: #1F1F29;
+        }
+      }
+    }
+
+    svg {
+      pointer-events: none;
+    }
   }
 
   &__menu {
@@ -71,6 +97,11 @@
   &__link {
     color: $black;
     font-weight: 500;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__contacts {

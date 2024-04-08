@@ -41,6 +41,11 @@
 
   &__link {
     font-size: clamp(16px, 0.907rem + 0.286vw, 20px);
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: $viola;
+    }
   }
 
   &__dropdown {
